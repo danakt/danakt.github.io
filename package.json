@@ -1,0 +1,30 @@
+{
+  "name": "danakt.com",
+  "version": "0.0.1",
+  "description": "danakt.ru\u001b[H\u001b[H\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[3~\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[Dn: Danakt.ru",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danakt/uuid-by-string.git"
+  },
+  "author": "Danakt Frost",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danakt/uuid-by-string/issues"
+  },
+  "homepage": "https://github.com/danakt/uuid-by-string#readme",
+  "dependencies": {
+    "compression": "^1.6.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "express-babelify-middleware": "^0.2.1",
+    "express-less": "^0.1.0",
+    "jade": "^1.11.0"
+  },
+  "devDependencies": {
+    "forever": "^0.15.3"
+  }
+}

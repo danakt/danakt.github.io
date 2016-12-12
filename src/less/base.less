@@ -1,0 +1,119 @@
+// Base ------------------------------------------------------------------------
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #efefef;
+    font: 15px @inconsolata;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    .transition(.1s ease-out);
+    .transition-prop(~'color, background, opacity, border');
+
+    &:hover, &:active {
+        color: @cyan;
+    }
+}
+
+// Page styles -----------------------------------------------------------------
+.bgvideo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    overflow: hidden;
+    background: fade(#1a1a1a, 80%);
+
+    video{
+        position: absolute;
+        z-index: -1000;
+        left: 50%; top: 50%;
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+    }
+
+    .glitch(@i) when (@i >= 0) {
+        &#glitch@{i} {
+            background: fade(#1a1a1a, 80%) url('/img/glitch@{i}.png')
+        }
+        .glitch(@i - 1)
+    }
+    .glitch(3);
+}
+
+.logo {
+    background: data-uri('/../../public/img/logo.png') no-repeat;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 99;
+    left: 30px; top: 30px;
+
+    background-position: -50px 0;
+
+    &:hover {
+        background-image: data-uri('/../../public/img/logo-h.png');
+    }
+}
+
+.about {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    padding: 110px 30px;
+    top: 50%; left: 50%;
+    .transform(translate(-50%, -50%));
+    // text-align: justify;
+
+    &_langthumb a.active {
+        cursor: default;
+        opacity: .15;
+        text-decoration: none;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &_name {
+        font-size: 50px;
+        color: @cyan;
+        margin: 20px 0;
+        text-transform: uppercase;
+    }
+
+}
+
+.f-left {
+    position: absolute;
+    left: 30px; bottom: 30px;
+    opacity: .15;
+}
+
+// Glitch style ----------------------------------------------------------------
+.glitch {
+    position: relative;
+
+    span {
+        position: absolute;
+        left: 0; top: 0;
+        color: @cyan;
+        visibility: hidden;
+        opacity: 0;
+
+        &::before {
+            content: attr(data-text);
+        }
+    }
+}
