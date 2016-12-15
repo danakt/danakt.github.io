@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danakt/uuid-by-string.git"
+    "url": "git+https://github.com/danakt/danakt.com"
   },
   "author": "Danakt Frost",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/danakt/uuid-by-string/issues"
   },
-  "homepage": "https://github.com/danakt/uuid-by-string#readme",
+  "homepage": "https://github.com/danakt/danakt.com#readme",
   "dependencies": {
     "compression": "^1.6.2",
     "cors": "^2.8.1",
