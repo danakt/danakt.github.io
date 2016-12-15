@@ -28,8 +28,6 @@ var $ = {
 function ready() {
     // Updating variables with elements
     updateDOM($);
-    // Shuffle name
-    // shuffleText($.name, {speed: 150, charDelay: 30, startDelay: 500});
     // Glitch background video
     videoGlitchStart();
 }
