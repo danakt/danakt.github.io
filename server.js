@@ -1,4 +1,5 @@
 // Dependencies ----------------------------------------------------------------
+const fs            = require('fs');
 const express       = require('express');
 const compress      = require('compression');
 const cors          = require('cors');
@@ -38,15 +39,24 @@ app.use('/js/main.js', expressBabel(rootdir + '/src/js/main.js', {
 // Including jade
 app.set('views', path.join(rootdir + '/src'));
 app.set('view engine', 'jade');
+app.enable('view cache');
 // Code prettify
 app.locals.pretty = true;
 
-// Render jade pages
+// Routing ---------------------------------------------------------------------
+// Index page
 app.get('/', function (req, res) {
-  res.render('index', {
-      title:   'Hey',
-      message: 'Hello there!'
-  });
+    res.render('index', {});
+});
+// Sitemap
+app.get('/sitemap.xml', function (req, res) {
+    var stat = fs.statSync(rootdir + '/src/sitemap.jade');
+    var d = new Date(stat.mtime);
+
+    res.setHeader('Content-type', 'application/xml; charset=utf-8');
+    res.render('sitemap', {
+        lastmod: `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`
+    });
 });
 
 // Listen port
