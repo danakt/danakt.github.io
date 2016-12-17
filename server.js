@@ -1,5 +1,7 @@
 // Dependencies ----------------------------------------------------------------
 const fs            = require('fs');
+const http          = require('http');
+const https         = require('https');
 const express       = require('express');
 const compress      = require('compression');
 const cors          = require('cors');
@@ -9,10 +11,16 @@ const expressBabel  = require('express-babelify-middleware')
 
 
 // Constants -------------------------------------------------------------------
-global.rootdir = __dirname + '/';
+global.rootdir      = __dirname + '/';
 
-const port = 80;
-const app  = express();
+const http_port     = 80;
+const https_port    = 443;
+const app           = express();
+const https_options = {
+  key:  fs.readFileSync('./keys/key.pem'),
+  cert: fs.readFileSync('./keys/cert.cert')
+};
+
 
 // Server's settings -----------------------------------------------------------
 // Access-Control-Allow-Origin: *
@@ -59,5 +67,7 @@ app.get('/sitemap.xml', function (req, res) {
     });
 });
 
-// Listen port
-app.listen(port);
+
+// Starting server -------------------------------------------------------------
+http.createServer(app).listen(http_port);
+https.createServer(https_options, app).listen(https_port);
