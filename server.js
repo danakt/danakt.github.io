@@ -2,13 +2,13 @@
 const fs            = require('fs');
 const http          = require('http');
 const https         = require('https');
-const express       = require('express');
 const compress      = require('compression');
 const cors          = require('cors');
 const path          = require('path');
+const express       = require('express');
 const expressLess   = require('express-less');
 const expressBabel  = require('express-babelify-middleware')
-
+const httpsRedirect = require('express-https-redirect');
 
 // Constants -------------------------------------------------------------------
 global.rootdir      = __dirname + '/';
@@ -17,10 +17,9 @@ const http_port     = 80;
 const https_port    = 443;
 const app           = express();
 const https_options = {
-  key:  fs.readFileSync('./keys/key.pem'),
-  cert: fs.readFileSync('./keys/cert.cert')
+    key:  fs.readFileSync('./keys/key.pem'),
+    cert: fs.readFileSync('./keys/cert.cert')
 };
-
 
 // Server's settings -----------------------------------------------------------
 // Access-Control-Allow-Origin: *
@@ -29,6 +28,9 @@ app.use(cors());
 app.use(compress({threshold: 512}));
 // Hiding information about yourself
 app.disable('x-powered-by');
+
+// https redirect
+app.use('/', httpsRedirect());
 
 // Static dir
 app.use(express.static(rootdir + '/public'));
@@ -53,11 +55,13 @@ app.locals.pretty = true;
 
 // Routing ---------------------------------------------------------------------
 // Index page
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
+    // console.log(/^https$/.test(req.protocol));
+
     res.render('index', {});
 });
 // Sitemap
-app.get('/sitemap.xml', function (req, res) {
+app.get('/sitemap.xml', (req, res) => {
     var stat = fs.statSync(rootdir + '/src/sitemap.jade');
     var d = new Date(stat.mtime);
 
@@ -66,8 +70,6 @@ app.get('/sitemap.xml', function (req, res) {
         lastmod: `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`
     });
 });
-
-
-// Starting server -------------------------------------------------------------
-http.createServer(app).listen(http_port);
+// Listen ports ----------------------------------------------------------------
 https.createServer(https_options, app).listen(https_port);
+http.createServer(app).listen(http_port);
