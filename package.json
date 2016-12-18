@@ -4,7 +4,8 @@
   "description": "danakt.ru website",
   "main": "server.js",
   "scripts": {
-    "test": "mocha"
+    "start": "node server.js",
+    "local": "node server.js --local"
   },
   "repository": {
     "type": "git",

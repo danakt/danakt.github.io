@@ -10,16 +10,23 @@ const expressLess   = require('express-less');
 const expressBabel  = require('express-babelify-middleware')
 const httpsRedirect = require('express-https-redirect');
 
-// Constants -------------------------------------------------------------------
+// Init ------------------------------------------------------------------------
 global.rootdir      = __dirname + '/';
 
 const http_port     = 80;
 const https_port    = 443;
 const app           = express();
-const https_options = {
-    key:  fs.readFileSync('./keys/key.pem'),
-    cert: fs.readFileSync('./keys/cert.cert')
-};
+const local         = !!~process.argv.indexOf('--local');
+
+var https_options   = {};
+
+// For local running
+if(!local) {
+    https_options = {
+        key:  fs.readFileSync('./keys/key.pem'),
+        cert: fs.readFileSync('./keys/cert.cert')
+    }
+}
 
 // Server's settings -----------------------------------------------------------
 // Access-Control-Allow-Origin: *
@@ -30,7 +37,9 @@ app.use(compress({threshold: 512}));
 app.disable('x-powered-by');
 
 // https redirect
-app.use('/', httpsRedirect());
+if(!local) {
+    app.use('/', httpsRedirect());
+}
 
 // Static dir
 app.use(express.static(rootdir + '/public'));
@@ -56,10 +65,9 @@ app.locals.pretty = true;
 // Routing ---------------------------------------------------------------------
 // Index page
 app.get('/', (req, res) => {
-    // console.log(/^https$/.test(req.protocol));
-
     res.render('index', {});
 });
+
 // Sitemap
 app.get('/sitemap.xml', (req, res) => {
     var stat = fs.statSync(rootdir + '/src/sitemap.jade');
@@ -70,6 +78,9 @@ app.get('/sitemap.xml', (req, res) => {
         lastmod: `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`
     });
 });
+
 // Listen ports ----------------------------------------------------------------
-https.createServer(https_options, app).listen(https_port);
 http.createServer(app).listen(http_port);
+if(!local) {
+    https.createServer(https_options, app).listen(https_port);
+}
