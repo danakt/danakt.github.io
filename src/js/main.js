@@ -25,12 +25,12 @@ var $ = {
 };
 
 // Dom ready -------------------------------------------------------------------
-function ready() {
+document.addEventListener('DOMContentLoaded', function() {
     // Updating variables with elements
     updateDOM($);
     // Glitch background video
     videoGlitchStart();
-}
+});
 
 // Updating the $ object with elements -----------------------------------------
 function updateDOM($) {
@@ -46,67 +46,6 @@ function updateDOM($) {
     }
 
     $.body = $.doc.body;
-}
-
-// Shuffle text effect ---------------------------------------------------------
-function shuffleText(el, settings) {
-    clearInterval(el.shuffleInterval);
-    clearInterval(el.writeInterval);
-
-    settings = settings || {};
-
-    settings.speed      = settings.speed      || 60;
-    settings.charDelay  = settings.charDelay  || 20;
-    settings.startDelay = settings.startDelay || settings.charDelay;
-
-    el.storeText = el.storeText || el.innerHTML;
-
-    var chars = '!@$%^&_+"?:;~`_qwertyuiopasdfghjklzxcvbnm1234567890';
-    var writedHTML = '';
-
-    el.shuffleInterval = setInterval(function() {
-        var strLen = settings.write
-            ? +settings.write
-            : el.storeText.length - writedHTML.length;
-        el.innerHTML = (
-            writedHTML +
-            Array(strLen)
-                .fill('')
-                .map(char => chars[~~(Math.random() * chars.length)])
-                .join('')
-        ).substr(0, el.storeText.length);
-
-    }, settings.charDelay);
-
-    el.startDelay = setTimeout(function() {
-        el.writeInterval = setInterval(function() {
-            if(writedHTML.length === el.storeText.length) {
-                clearInterval(el.shuffleInterval);
-                clearInterval(el.writeInterval);
-            }
-
-            writedHTML += el.storeText[writedHTML.length];
-        }, settings.speed);
-    }, settings.startDelay);
-}
-
-// Binding shuffle links -------------------------------------------------------
-function bindShuffleLinks() {
-    $.getElementsByTagName('a').forEach(el => {
-        if(~el.className.indexOf('active'))
-            return;
-
-        el.addEventListener('mouseover', () => {
-            shuffleText(el, {speed: 50})
-        });
-
-        el.addEventListener('mouseout', () => {
-            clearInterval(el.shuffleInterval);
-            clearInterval(el.writeInterval);
-
-            el.innerHTML = el.storeText || el.innerHTML;
-        });
-    });
 }
 
 // Background video glitch -----------------------------------------------------
@@ -177,8 +116,3 @@ function videoGlitchStart() {
         glitchTimeout = setTimeout(runGlitch, ~~(Math.random() * 1e4));
     });
 }
-
-// Listeners -------------------------------------------------------------------
-
-// DOM Ready lestener
-document.addEventListener('DOMContentLoaded', ready);
