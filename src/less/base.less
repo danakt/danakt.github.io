@@ -45,7 +45,7 @@ a {
 
     .glitch(@i) when (@i >= 0) {
         &#glitch@{i} {
-            background: fade(#1a1a1a, 80%) url('/img/glitch@{i}.png')
+            background: fade(#1a1a1a, 80%) url('/src/glitch@{i}.png')
         }
         .glitch(@i - 1)
     }
@@ -53,7 +53,7 @@ a {
 }
 
 .logo {
-    background: data-uri('/../../public/img/logo.png') no-repeat;
+    background: data-uri('/../../public/src/logo.png') no-repeat;
     height: 50px;
     width: 50px;
     position: absolute;
@@ -63,7 +63,7 @@ a {
     background-position: -50px 0;
 
     &:hover {
-        background-image: data-uri('/../../public/img/logo-h.png');
+        background-image: data-uri('/../../public/src/logo-h.png');
     }
 }
 
