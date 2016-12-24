@@ -1,4 +1,4 @@
 /node_modules
 /keys
-/public
-!/public/src
+/public/*
+!/public/src/*
