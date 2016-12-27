@@ -9,6 +9,7 @@ const express       = require('express');
 const expressLess   = require('express-less');
 const expressBabel  = require('express-babelify-middleware')
 const httpsRedirect = require('express-https-redirect');
+const slash         = require('express-slash');
 
 // Init ------------------------------------------------------------------------
 global.rootdir      = __dirname + '/';
@@ -63,21 +64,10 @@ app.enable('view cache');
 app.locals.pretty = true;
 
 // Routing ---------------------------------------------------------------------
-// Index page
-app.get('/', (req, res) => {
-    res.render('index', {});
-});
+app.use('/', require('./routes'));
 
-// Sitemap
-app.get('/sitemap.xml', (req, res) => {
-    var stat = fs.statSync(rootdir + '/src/sitemap.jade');
-    var d = new Date(stat.mtime);
-
-    res.setHeader('Content-type', 'application/xml; charset=utf-8');
-    res.render('sitemap', {
-        lastmod: `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`
-    });
-});
+// Fix shashes in url
+app.use(slash());
 
 // Listen ports ----------------------------------------------------------------
 http.createServer(app).listen(http_port);
