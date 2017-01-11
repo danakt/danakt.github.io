@@ -89,11 +89,11 @@ videoGlitchStart = ->
     # Runing video end glitch
     $.video.addEventListener('ended', (event) ->
         showGlitch()
-        setTimeout((->
+        setTimeout (->
             hideGlitch()
             $.video.play()
             return
-        ), 300)
+        ), 300
 
         glitchTimeout = setTimeout(runGlitch, ~~(Math.random() * 1e4))
         return
