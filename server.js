@@ -7,9 +7,10 @@ const cors          = require('cors');
 const path          = require('path');
 const express       = require('express');
 const expressLess   = require('express-less');
-const expressBabel  = require('express-babelify-middleware')
 const httpsRedirect = require('express-https-redirect');
 const slash         = require('express-slash');
+const coffee        = require('coffee-middleware');
+
 
 // Init ------------------------------------------------------------------------
 global.rootdir      = __dirname + '/';
@@ -52,8 +53,9 @@ app.use('/css', expressLess(rootdir + '/src/less', {
 }));
 
 // Onfly-compilation js
-app.use('/js/main.js', expressBabel(rootdir + '/src/js/main.js', {
-    minify: true
+app.use('/js/', coffee({
+    src: rootdir + '/src/js/',
+    compress: true
 }));
 
 // Including jade

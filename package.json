@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/danakt/danakt.ru#readme",
   "dependencies": {
+    "coffee-middleware": "^0.3.0",
     "compression": "^1.6.2",
     "cors": "^2.8.1",
     "express": "^4.14.0",
-    "express-babelify-middleware": "^0.2.1",
     "express-https-redirect": "^1.0.0",
     "express-less": "^0.1.0",
     "express-slash": "^2.0.1",
