@@ -1,6 +1,4 @@
 const router        = require('express').Router();
-const expressBabel  = require('express-babelify-middleware');
-const expressLess   = require('express-less');
 
 // Index page ------------------------------------------------------------------
 router.get('/', (req, res) => {
