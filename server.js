@@ -46,8 +46,7 @@ app.use('/css', expressLess('./src/less', {
 
 // Onfly-compilation js
 app.use('/js', coffee({
-    src: './src/coffee',
-    compress: true
+    src: './src/coffee'
 }));
 
 // Including jade
