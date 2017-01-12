@@ -11,23 +11,17 @@ const httpsRedirect = require('express-https-redirect');
 const slash         = require('express-slash');
 const coffee        = require('coffee-middleware');
 
+const routes        = require('./routes');
 
 // Init ------------------------------------------------------------------------
-global.rootdir      = __dirname + '/';
+const http_port  = 80;
+const https_port = 443;
+const app        = express();
+const local      = !!~process.argv.indexOf('--local');
 
-const http_port     = 80;
-const https_port    = 443;
-const app           = express();
-const local         = !!~process.argv.indexOf('--local');
-
-var https_options   = {};
-
-// For local running
-if(!local) {
-    https_options = {
-        key:  fs.readFileSync('./keys/key.pem'),
-        cert: fs.readFileSync('./keys/cert.cert')
-    }
+var https_options = local ? {} : {
+    key:  fs.readFileSync('./keys/key.pem'),
+    cert: fs.readFileSync('./keys/cert.cert')
 }
 
 // Server's settings -----------------------------------------------------------
@@ -39,40 +33,36 @@ app.use(compress({threshold: 512}));
 app.disable('x-powered-by');
 
 // https redirect
-if(!local) {
-    app.use('/', httpsRedirect());
-}
+!local && app.use('/', httpsRedirect());
 
 // Static dir
-app.use(express.static(rootdir + '/public'));
+app.use(express.static('./public'));
 
 // Onfly-compilation less
-app.use('/css', expressLess(rootdir + '/src/less', {
+app.use('/css', expressLess('./src/less', {
     debug:    true,
     compress: true
 }));
 
 // Onfly-compilation js
-app.use('/js/', coffee({
-    src: rootdir + '/src/js/',
+app.use('/js', coffee({
+    src: './src/coffee',
     compress: true
 }));
 
 // Including jade
-app.set('views', path.join(rootdir + '/src'));
+app.set('views', path.join('./src/jade'));
 app.set('view engine', 'jade');
 app.enable('view cache');
 // Code prettify
 app.locals.pretty = true;
 
 // Routing ---------------------------------------------------------------------
-app.use('/', require('./routes'));
+app.use('/', routes);
 
 // Fix shashes in url
 app.use(slash());
 
 // Listen ports ----------------------------------------------------------------
 http.createServer(app).listen(http_port);
-if(!local) {
-    https.createServer(https_options, app).listen(https_port);
-}
+!local && https.createServer(https_options, app).listen(https_port);

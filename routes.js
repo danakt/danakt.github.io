@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 
 // Sitemap ---------------------------------------------------------------------
 router.get('/sitemap.xml', (req, res) => {
-    var stat = fs.statSync(rootdir + '/src/sitemap.jade');
+    var stat = fs.statSync('./src/jade/sitemap.jade');
     var d = new Date(stat.mtime);
 
     res.setHeader('Content-type', 'application/xml; charset=utf-8');
