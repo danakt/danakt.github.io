@@ -1,4 +1,4 @@
-const router        = require('express').Router();
+const router = require('express').Router();
 
 // Index page ------------------------------------------------------------------
 router.get('/', (req, res) => {
