@@ -4,8 +4,9 @@
   "description": "danakt.ru website",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "local": "node server.js --local"
+    "start": "coffee server.coffee",
+    "local": "coffee server.coffee --local",
+    "forever": "forever start -c coffee server.coffee --local"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/danakt/danakt.ru#readme",
   "dependencies": {
     "coffee-middleware": "^0.3.0",
+    "coffee-script": "^1.12.2",
     "compression": "^1.6.2",
     "cors": "^2.8.1",
     "express": "^4.14.0",
