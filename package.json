@@ -6,7 +6,8 @@
   "scripts": {
     "start": "coffee server.coffee",
     "local": "coffee server.coffee --local",
-    "forever": "forever start -c coffee server.coffee --local"
+    "forever": "forever start -c coffee server.coffee",
+    "forever-local": "forever start -c coffee server.coffee --local"
   },
   "repository": {
     "type": "git",
