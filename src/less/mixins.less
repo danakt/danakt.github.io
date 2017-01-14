@@ -5,18 +5,10 @@
     &:after{clear: both}
 }
 
-.fl {float: left}
-.fr {float: right}
-
 // Трансформация ---------------------------------------------------------------
 .transform(@string) {
     -webkit-transform: @string;
             transform: @string;
-}
-
-.transform-origin(@origin) {
-    -webkit-transform-origin: @origin;
-            transform-origin: @origin;
 }
 
 // Анимация --------------------------------------------------------------------
@@ -24,61 +16,9 @@
     -webkit-transition: @transition;
             transition: @transition;
 }
-
-.transition-duration(@duration) {
-    -webkit-transition-duration: @duration;
-            transition-duration: @duration;
-}
-
 .transition-prop(...) {
     -webkit-transition-property: @arguments;
             transition-property: @arguments;
 
     will-change: @arguments;
-}
-.transition-delay(@delay) {
-    -webkit-transition-delay: @delay;
-            transition-delay: @delay;
-}
-.animation-delay(@delay) {
-    -webkit-animation-delay: @delay;
-            animation-delay: @delay;
-}
-
-// Градиенты -------------------------------------------------------------------
-.gradient(@start: #eee, @end: white) {
-    background-color: @start;
-    background: -webkit-gradient(linear, left top, left bottom, from(@start), to(@end));
-    background: -webkit-linear-gradient(top, @start, @end);
-    background:    -moz-linear-gradient(top, @start, @end);
-    background:         linear-gradient(top, @start, @end);
-}
-.horizontal-gradient(@start: #eee, @end: white) {
-    background-color: @start;
-    background: -webkit-gradient(linear, left top, right top, from(@start), to(@end));
-    background: -webkit-linear-gradient(left, @start, @end);
-    background:    -moz-linear-gradient(left, @start, @end);
-    background:         linear-gradient(left, @start, @end);
-}
-
-// Циклы -----------------------------------------------------------------------
-.for(@i, @n) {.-each(@i)}
-.for(@n) when (isnumber(@n)) {.for(1, @n)}
-.for(@i, @n) when not (@i = @n) {
-    .for((@i + (@n - @i) / abs(@n - @i)), @n);
-}
-
-.for(@array) when (default()) {.for-impl_(length(@array))}
-.for-impl_(@i) when (@i > 1) {.for-impl_((@i - 1))}
-.for-impl_(@i) when (@i > 0) {.-each(extract(@array, @i))}
-
-// Получение переменной по ключу
-.by-key(@array, @key, @fallback...) {
-    .-(length(@array));
-    .-(@i) when (@i > 0) {.-((@i - 1))}
-    .-(@i) when (@key = extract(extract(@array, @i), 1)) {
-        @by-key: extract(extract(@array, @i), 2);
-    }
-
-    .--() {@by-key: @fallback} .--;
 }
