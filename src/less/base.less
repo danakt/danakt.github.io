@@ -14,7 +14,7 @@ body {
     color: #fff;
 
     @media (max-width: 1024px) {
-        background: url('/src/poster.png') 50% no-repeat;
+        background: url('/poster.png') 50% no-repeat;
         background-size: cover;
     }
 }
@@ -55,7 +55,7 @@ a {
 
     .glitch(@i) when (@i >= 0) {
         &#glitch@{i} {
-            background: fade(#1a1a1a, 80%) url('/src/glitch@{i}.png')
+            background: fade(#1a1a1a, 80%) url('/glitch@{i}.png')
         }
         .glitch(@i - 1)
     }
@@ -63,7 +63,7 @@ a {
 }
 
 .logo {
-    background: data-uri('/../../public/src/logo.png') no-repeat;
+    background: data-uri('/../../public/logo.png') no-repeat;
     height: 50px;
     width: 50px;
     position: absolute;
@@ -73,7 +73,7 @@ a {
     background-position: -50px 0;
 
     &:hover {
-        background-image: data-uri('/../../public/src/logo-h.png');
+        background-image: data-uri('/../../public/logo-h.png');
     }
 }
 
