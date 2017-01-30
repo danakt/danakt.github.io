@@ -1,5 +1,5 @@
 /node_modules
 /benedictcumberbatchgenerator
 /keys
-/public/*
-!/public/src/
+/public/**/*.*
+!/public/*
