@@ -2,8 +2,8 @@
 <title>Danakt Frost</title>
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="/resources/favicon.png">
-<link rel="apple-touch-icon" href="/resources/favicon.png">
+<link rel="icon" type="image/png" href="./resources/favicon.png">
+<link rel="apple-touch-icon" href="./resources/favicon.png">
 
 <!-- Meta -->
 <meta charset="utf-8">
@@ -30,16 +30,13 @@
 <meta name="twitter:image:src" content="http://danakt.ru/resources/sharing0.jpg">
 
 <!-- Styles -->
-<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-<link href="/css/main.css" rel="stylesheet">
-
-<!-- Scripts -->
-<script src="/scripts/index.js"></script>
+<link href="./css/reset.css" rel="stylesheet">
+<link href="./css/style.css" rel="stylesheet">
 
 <!-- Content -->
 <div class="bgvideo">
-    <video id="bgvid" poster="/resources/poster.png" playsinline autoplay muted>
-        <source src="/resources/hsdf3kMz7.mp4" type="video/mp4">
+    <video id="bgvid" poster="./resources/poster.png" playsinline autoplay muted>
+        <source src="./resources/hsdf3kMz7.mp4" type="video/mp4">
     </video>
 </div><a href="/" title="Homepage" class="logo"></a>
 <div class="about">
@@ -62,6 +59,15 @@
 <div class="f-right">
     <!-- <a href="https://github.com/danakt/danakt.ru" title="Edit on GitHub" target="_blank">Edit on GitHub</a> -->
 </div>
+
+
+<!-- Scripts -->
+<script src="./scripts/index.js"></script>
+<script>
+    new Glitch()
+</script>
+
+<!-- Metrika -->
 <script>
     (function(d, w, c) {
         (w[c] = w[c] || []).push(function() {
