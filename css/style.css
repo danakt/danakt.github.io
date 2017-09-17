@@ -1,34 +1,39 @@
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
 /* Base --------------------------------------------------------------------- */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 html, body {
-    height: 100%;
     min-height: 450px;
+    height: 100%
 }
 
 body {
     background: #efefef;
     font: 14px 'Inconsolata', Monaco, monospace;
-    color: #fff;
+    color: #fff
 }
 
 @media (max-width: 1024px) {
     body {
         background: url('/poster.png') 50% no-repeat;
-        background-size: cover;
+        background-size: cover
     }
 }
 
 a {
     color: #fff;
+    -webkit-transition: .1s ease-out;
     transition: .1s ease-out;
+    -webkit-transition-property: color, background, opacity, border;
     transition-property: color, background, opacity, border;
+    will-change: color, background, opacity, border
 }
 
 a:hover, a:active {
-    color: #4affff;
+    color: #4affff
 }
 
 /* Page styles -------------------------------------------------------------- */
@@ -36,56 +41,58 @@ a:hover, a:active {
     width: 100%;
     height: 100%;
     position: absolute;
-    left: 0; top: 0;
+    left: 0;
+    top: 0;
     overflow: hidden;
-    background: fade(#1a1a1a, 80%);
+    background: rgba(26, 26, 26, 0.8)
 }
 
-video {
+.bgvideo video {
     position: absolute;
     z-index: -1000;
-    left: 50%; top: 50%;
+    left: 50%;
+    top: 50%;
     width: auto;
     height: auto;
     min-width: 100%;
     min-height: 100%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
 }
-
 @media (max-width: 1024px) {
-    video {
-        display: none;
+    .bgvideo video {
+        display: none
     }
 }
 
-#glitch1 {
-    background: fade(#1a1a1a, 80%) url('/resources/glitch1.png')
+.bgvideo#glitch3 {
+    background: rgba(26, 26, 26, 0.8) url('/glitch3.png')
 }
 
-#glitch2 {
-    background: fade(#1a1a1a, 80%) url('/resources/glitch2.png')
+.bgvideo#glitch2 {
+    background: rgba(26, 26, 26, 0.8) url('/glitch2.png')
 }
 
-#glitch3 {
-    background: fade(#1a1a1a, 80%) url('/resources/glitch3.png')
+.bgvideo#glitch1 {
+    background: rgba(26, 26, 26, 0.8) url('/glitch1.png')
 }
 
-#glitch4 {
-    background: fade(#1a1a1a, 80%) url('/resources/glitch4.png')
+.bgvideo#glitch0 {
+    background: rgba(26, 26, 26, 0.8) url('/glitch0.png')
 }
 
 .logo {
-    background: url('resources/logo.png') no-repeat;
+    background: url('../resources/logo.png') no-repeat;
     height: 50px;
     width: 50px;
     position: absolute;
     z-index: 99;
-    left: 30px; top: 30px;
-    background-position: -50px 0;
+    left: 30px;
+    top: 30px;
+    background-position: -50px 0
 }
 
-.logo {
-    background-image: url('/resources/logo-h.png');
+.logo:hover {
+    background-image: url('../resources/logo-h.png');
 }
 
 .about {
@@ -93,60 +100,64 @@ video {
     width: 100%;
     max-width: 600px;
     padding: 110px 45px;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
 }
-
 
 .about_langthumb a.active {
     cursor: default;
     opacity: .15;
-    text-decoration: none;
+    text-decoration: none
 }
 
 .about_langthumb a.active:hover {
-    color: #fff;
+    color: #fff
 }
 
 .about_name {
     font-size: 50px;
     color: #4affff;
     margin: 20px 0;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 @media (max-width: 1024px) {
     .about_name {
-        font-size: 40px;
+        font-size: 40px
     }
 }
 
 /* Footer ------------------------------------------------------------------- */
 .f-left {
     position: absolute;
-    left: 30px; bottom: 30px;
-    opacity: .15;
+    left: 30px;
+    bottom: 30px;
+    opacity: .15
 }
 
 .f-right {
     position: absolute;
-    right: 30px; bottom: 30px;
-    opacity: .15;
+    right: 30px;
+    bottom: 30px;
+    opacity: .15
 }
 
 /* Glitch style ------------------------------------------------------------- */
 .glitch {
-    position: relative;
+    position: relative
 }
 
 .glitch span {
     position: absolute;
-    left: 0; top: 0;
+    left: 0;
+    top: 0;
     color: #4affff;
     visibility: hidden;
-    opacity: 0;
+    opacity: 0
 }
 
 .glitch span::before {
-    content: attr(data-text);
+    content: attr(data-text)
 }
