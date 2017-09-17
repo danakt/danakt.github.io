@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "./scripts/",
+    "target": "es5",
+    "module": "none",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "removeComments": true,
+    "strictNullChecks": false,
+    "lib": ["es5", "es6", "dom"]
+  },
+  "include": [
+    "_src"
+  ],
+  "exclude": [
+    "scripts",
+    "node_modules"
+  ],
+  "compileOnSave": true
+}
