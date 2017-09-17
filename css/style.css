@@ -65,19 +65,19 @@ a:hover, a:active {
 }
 
 .bgvideo#glitch3 {
-    background: rgba(26, 26, 26, 0.8) url('/glitch3.png')
+    background: rgba(26, 26, 26, 0.8) url('../resources/glitch3.png')
 }
 
 .bgvideo#glitch2 {
-    background: rgba(26, 26, 26, 0.8) url('/glitch2.png')
+    background: rgba(26, 26, 26, 0.8) url('../resources/glitch2.png')
 }
 
 .bgvideo#glitch1 {
-    background: rgba(26, 26, 26, 0.8) url('/glitch1.png')
+    background: rgba(26, 26, 26, 0.8) url('../resources/glitch1.png')
 }
 
 .bgvideo#glitch0 {
-    background: rgba(26, 26, 26, 0.8) url('/glitch0.png')
+    background: rgba(26, 26, 26, 0.8) url('../resources/glitch0.png')
 }
 
 .logo {
