@@ -4,9 +4,10 @@
     "target": "es5",
     "module": "none",
     "moduleResolution": "node",
-    "sourceMap": true,
+    "sourceMap": false,
     "noImplicitAny": false,
     "noImplicitReturns": false,
+    "strictNullChecks": true,
     "removeComments": true,
     "strictNullChecks": false,
     "lib": ["es5", "es6", "dom"]
