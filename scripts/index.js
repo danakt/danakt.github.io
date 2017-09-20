@@ -93,3 +93,4 @@ var Glitch = (function () {
     };
     return Glitch;
 }());
+//# sourceMappingURL=index.js.map
