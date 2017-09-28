@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <title>Danakt Frost</title>
 
+<!-- HTTPS Redirect -->
+<script>
+    if (window.location.protocol === 'http:') {
+        window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length)
+    }
+</script>
+
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="./resources/favicon.png">
 <link rel="apple-touch-icon" href="./resources/favicon.png">
