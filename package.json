@@ -3,8 +3,7 @@
   "version": "2.0.0",
   "description": "danakt.ru website",
   "main": "server.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danakt/danakt.ru"
@@ -14,5 +13,8 @@
   "bugs": {
     "url": "https://github.com/danakt/issues"
   },
-  "homepage": "https://github.com/danakt/danakt.ru#readme"
+  "homepage": "https://github.com/danakt/danakt.ru#readme",
+  "devDependencies": {
+    "typescript": "^2.5.3"
+  }
 }
