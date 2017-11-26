@@ -3,9 +3,9 @@
 
 <!-- HTTPS Redirect -->
 <script>
-    if (window.location.protocol === 'http:') {
-        window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length)
-    }
+  if (window.location.protocol === 'http:') {
+    window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length)
+  }
 </script>
 
 <!-- Favicon -->
@@ -42,63 +42,71 @@
 
 <!-- Content -->
 <div class="bgvideo">
-    <video id="bgvid" poster="./resources/poster.png" playsinline autoplay muted>
-        <source src="./resources/hsdf3kMz7.mp4" type="video/mp4">
-    </video>
-</div><a href="/" title="Homepage" class="logo"></a>
+  <video id="bgvid" poster="./resources/poster.png" playsinline autoplay muted>
+    <source src="./resources/hsdf3kMz7.mp4" type="video/mp4">
+  </video>
+</div>
+<a href="/" title="Homepage" class="logo"></a>
 <div class="about">
-    <h1 id="name" class="about_name glitch">
-        Danakt Frost<span data-text="Danakt Frost"></span><span data-text="Danakt Frost"></span>
-    </h1>
-    <div class="about_text">
-        Hello, my name is Danakt. I'm a 21 y/o creative frontend
-        developer based in St Petersburg, Russia. Currently I am engaged in
-        remote work and open to suggestions.
-        <br><br>
-    </div>
-    Get in touch with me on <a href="//telegram.me/danakt" traget="blank">Telegram</a>, <a href="//www.instagram.com/danakt_frost/" traget="blank">Instagram</a>, <a href="//github.com/danakt" traget="blank">GitHub</a>.<!--, or send me an email at <a href="mailto:mail@danakt.ru">mail@danakt.ru</a>.-->
+  <h1 id="name" class="about_name glitch">
+    Danakt Frost
+    <span data-text="Danakt Frost"></span>
+    <span data-text="Danakt Frost"></span>
+  </h1>
+  <div class="about_text">
+    Hello, my name is Danakt. I'm a 21 y/o creative frontend developer based in
+    St Petersburg, Russia. Currently I am engaged in remote work and open to
+    suggestions.
+    <br>
+    <br>
+  </div>
+  Get in touch with me on
+  <a href="//telegram.me/danakt" traget="blank">Telegram</a>,
+  <a href="//www.instagram.com/danakt_frost/" traget="blank">Instagram</a>,
+  <a href="//github.com/danakt" traget="blank">GitHub</a>.
+  <!--, or send me an email at <a href="mailto:mail@danakt.ru">mail@danakt.ru</a>.-->
 </div>
 <div class="f-left">
-    2016–2017
+  2016–2017
 </div>
 
 <div class="f-right">
-    <!-- <a href="https://github.com/danakt/danakt.ru" title="Edit on GitHub" target="_blank">Edit on GitHub</a> -->
+  <!-- <a href="https://github.com/danakt/danakt.ru" title="Edit on GitHub" target="_blank">Edit on GitHub</a> -->
 </div>
 
 
 <!-- Scripts -->
 <script src="./scripts/index.js"></script>
 <script>
-    new Glitch()
+  new Glitch()
 </script>
 
 <!-- Metrika -->
 <script>
-    (function(d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter38138395 = new Ya.Metrika({
-                    id: 38138395,
-                    clickmap: true,
-                    trackLinks: true,
-                    accurateTrackBounce: true,
-                    webvisor: true
-                });
-            } catch (e) {}
+  (function (d, w, c) {
+    (w[c] = w[c] || []).push(function () {
+      try {
+        w.yaCounter38138395 = new Ya.Metrika({
+          id: 38138395,
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true,
+          webvisor: true
         });
+      } catch (e) { }
+    });
 
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function() {
-                n.parentNode.insertBefore(s, n);
-            };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
+    var n = d.getElementsByTagName("script")[0],
+      s = d.createElement("script"),
+      f = function () {
+        n.parentNode.insertBefore(s, n);
+      };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://mc.yandex.ru/metrika/watch.js";
 
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else f();
-    })(document, window, "yandex_metrika_callbacks");
+    if (w.opera == "[object Opera]") {
+      d.addEventListener("DOMContentLoaded", f, false);
+    } else f();
+  })(document, window, "yandex_metrika_callbacks");
 </script>
