@@ -9,7 +9,6 @@
     "noImplicitReturns": false,
     "strictNullChecks": true,
     "removeComments": true,
-    "strictNullChecks": false,
     "lib": ["es5", "es6", "dom"]
   },
   "include": [
