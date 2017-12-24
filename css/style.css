@@ -82,13 +82,13 @@ a:hover, a:active {
 
 .logo {
   background: url('../resources/logo.png') no-repeat;
+  background-size: 100%;
   height: 50px;
   width: 50px;
   position: absolute;
   z-index: 99;
   left: 30px;
   top: 30px;
-  background-position: -50px 0
 }
 
 .logo:hover {
