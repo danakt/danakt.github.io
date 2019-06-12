@@ -1,22 +1,11 @@
 {
   "compilerOptions": {
-    "outDir": "./scripts/",
     "target": "es5",
-    "module": "none",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "strictNullChecks": true,
-    "removeComments": true,
-    "lib": ["es5", "es6", "dom"]
-  },
-  "include": [
-    "_src"
-  ],
-  "exclude": [
-    "scripts",
-    "node_modules"
-  ],
-  "compileOnSave": true
+    "module": "commonjs",
+    "strict": true,
+    "jsx": "react",
+    "lib": ["dom", "es6", "es7", "esnext"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  }
 }
