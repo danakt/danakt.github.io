@@ -4,7 +4,7 @@ export const Logo = styled.a.attrs({
   href: '/',
   title: 'Homepage'
 })`
-  background: url('./logo.png') no-repeat;
+  background: url('./resources/logo.png') no-repeat;
   background-size: 100%;
   height: 50px;
   width: 50px;
@@ -14,6 +14,6 @@ export const Logo = styled.a.attrs({
   top: 30px;
 
   &:hover {
-    background-image: url('./logo-h.png');
+    background-image: url('./resources/logo-h.png');
   }
 `

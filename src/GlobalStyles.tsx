@@ -18,7 +18,7 @@ export const GlobalStyles = createGlobalStyle`
 
   @media (max-width: 1024px) {
     body {
-      background: url('./poster.png') 50% no-repeat;
+      background: url('./resources/poster.png') 50% no-repeat;
       background-size: cover
     }
   }

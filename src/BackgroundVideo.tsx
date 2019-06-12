@@ -33,7 +33,12 @@ type Props = {
 }
 
 export const BackgroundVideo = (props: Props) => {
-  const glitchImages = ['./glitch0.png', './glitch1.png', './glitch2.png', './glitch3.png']
+  const glitchImages = [
+    './resources/glitch0.png',
+    './resources/glitch1.png',
+    './resources/glitch2.png',
+    './resources/glitch3.png'
+  ]
   const [bgStyles, setBgStyles] = useState<React.CSSProperties>({})
 
   useEffect(() => {
@@ -41,16 +46,22 @@ export const BackgroundVideo = (props: Props) => {
       const index = Math.floor(Math.random() * glitchImages.length)
 
       // Updating styles of background
-      setBgStyles(props.isGlitching ? { backgroundImage: `url('./glitch${index}.png')` } : {})
+      setBgStyles(props.isGlitching ? { backgroundImage: `url('${glitchImages[index]}')` } : {})
     }, props.intervalTime)
 
     return () => clearInterval(intervalId)
-  }, [glitchImages.length, props.intervalTime, props.isGlitching])
+  }, [glitchImages, props.intervalTime, props.isGlitching])
 
   return (
     <Wrapper style={bgStyles}>
-      <Video poster="./poster.png" playsInline autoPlay muted onEnded={e => (e.target as HTMLVideoElement).play()}>
-        <source src="./hsdf3kMz7.mp4" type="video/mp4" />
+      <Video
+        poster="./resources/poster.png"
+        playsInline
+        autoPlay
+        muted
+        onEnded={e => (e.target as HTMLVideoElement).play()}
+      >
+        <source src="./resources/hsdf3kMz7.mp4" type="video/mp4" />
       </Video>
     </Wrapper>
   )
