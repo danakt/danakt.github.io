@@ -17,6 +17,6 @@ deploy:
   keep-history: true
   local-dir: dist
   repo: danakt/danakt.github.io
-  target-branch: gh-pages
+  target-branch: master
   on:
-    branch: master
+    branch: source
