@@ -10,6 +10,7 @@ import { Footer } from './Footer'
 import { Logo } from './Logo'
 
 const SOCIALS = [
+  ['VK', '//vk.com/danakt'],
   ['Telegram', '//telegram.me/danakt'],
   ['Instagram', '//instagram.com/danakt_frost'],
   ['GitHub', '//github.com/danakt']
