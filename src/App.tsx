@@ -13,6 +13,7 @@ const SOCIALS = [
   ['VK', '//vk.com/danakt'],
   ['Telegram', '//telegram.me/danakt'],
   ['Instagram', '//instagram.com/danakt_frost'],
+  ['Twitter', '//twitter.com/danakt_frost'],
   ['GitHub', '//github.com/danakt']
 ]
 
