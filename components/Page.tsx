@@ -15,8 +15,20 @@ const Wrapper = styled.div`
 
 const Content = styled.div`
   width: 50%;
-  flex: 0 0 50%;
+  flex: 0 0 auto;
   position: relative;
+
+  @media (max-width: 1310px) {
+    width: 62.5%;
+  }
+
+  @media (max-width: 1150px) {
+    width: 75%;
+  }
+
+  @media (max-width: 980px) {
+    width: 100%;
+  }
 `;
 
 const Breadcrumbs = styled.strong`

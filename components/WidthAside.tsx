@@ -8,6 +8,11 @@ export const Aside = styled.div.attrs({ className: 'sans-serif' })`
   top: 0;
   margin-top: 8px;
   font-size: 16px;
+
+  @media (max-width: 1310px) {
+    position: static;
+    margin-top: 20px;
+  }
 `;
 
 export const Wrapper = styled.div`

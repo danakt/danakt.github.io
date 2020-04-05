@@ -74,6 +74,11 @@ export const GlobalStyles = createGlobalStyle`
     font-style: normal;
     color: rgba(0, 0, 0, .87);
     -webkit-font-smoothing: antialiased;
+
+    @media (max-width: 590px) {
+      font-size: 17px;
+      padding: 0 15px;
+    }
   }
 
   a {
@@ -110,14 +115,23 @@ export const GlobalStyles = createGlobalStyle`
   h1 {
     margin: 60px 0 10px;
     font-size: 34px;
-    line-height: 40px;
+    line-height: 1.25;
+
+    @media (max-width: 590px) {
+      margin: 45px 0 10px;
+      font-size: 21px;
+    }
   }
 
   h2 {
     font-size: 24px;
-    line-height: 30px;
+    line-height: 1.25;
     font-weight: 700;
     margin: 70px 0 0;
+
+    @media (max-width: 590px) {
+      font-size: 17px;
+    }
   }
 
   p {
@@ -130,6 +144,10 @@ export const GlobalStyles = createGlobalStyle`
 
     li {
       margin-bottom: 10px;
+
+      @media (max-width: 590px) {
+        margin-bottom: 5px;
+      }
     }
   }
 `;
