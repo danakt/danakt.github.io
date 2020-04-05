@@ -37,7 +37,7 @@ export default () => {
         </p>
       </WithAside>
 
-      <h1>Зачем этот сайт существует?</h1>
+      <h1>Зачем этот сайт нужен?</h1>
       <p>
         Я купил домены{' '}
         <a href="/" className="always-fresh">
