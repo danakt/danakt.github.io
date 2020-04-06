@@ -1,5 +1,5 @@
 import { Page } from '../components/Page';
-import Head from 'next/head';
+import Link from 'next/link';
 import { Me } from '../components/Me';
 import { WithAside } from '../components/WidthAside';
 
@@ -34,9 +34,11 @@ export default () => {
       <WithAside aside={<Me />}>
         <p>
           Меня зовут{' '}
-          <a href="/danakt" title="Данакт FAQ">
-            Данакт
-          </a>
+          <Link href="/danakt">
+            <a href="/danakt" title="Данакт FAQ">
+              Данакт
+            </a>
+          </Link>
           , я программист ВКонтакте.
         </p>
       </WithAside>

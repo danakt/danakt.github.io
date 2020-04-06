@@ -9,6 +9,5 @@ export const Photo = styled.img`
 export const Me = () => (
   <>
     <Photo src="/me2016.jpg" alt="2017" />
-    {/* <em>Так я выглядел в 2017</em> */}
   </>
 );
