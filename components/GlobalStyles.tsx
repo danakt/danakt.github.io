@@ -79,26 +79,43 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 17px;
       padding: 0 15px;
     }
+
+    @media (prefers-color-scheme: dark) {
+      background: #121212;
+      color: #fff;
+    }
   }
 
   a {
     color: #428bca;
-    background-image: linear-gradient(rgba(66, 139, 202, .13), rgba(66, 139, 202, .13));
+    background: linear-gradient(rgba(66, 139, 202, .13), rgba(66, 139, 202, .13));
     text-decoration: none;
     background-repeat: repeat-x;
     background-size: 100% 1px;
     background-position: 0 100%;
 
+    @media (prefers-color-scheme: dark) {
+      color: #5aa6e7;
+      background-image: linear-gradient(rgba(90, 166, 231, .3), rgba(90, 166, 231, .3));
+    }
+
     &:active, &:hover, &:focus {
       color: rgb(255, 0, 0);
       background-image: linear-gradient(rgba(255, 0, 0, .13), rgba(255, 0, 0, .13));
+
+      @media (prefers-color-scheme: dark) {
+        background-image: linear-gradient(rgba(255, 0, 0, .3), rgba(255, 0, 0, .3));
+      }
     }
 
      &:not(.always-fresh):visited {
       color: rgb(146, 54, 149);
-      background-image: linear-gradient(rgba(146, 54, 149, .13), rgba(146, 54, 149, .13))
+      background-image: linear-gradient(rgba(146, 54, 149, .13), rgba(146, 54, 149, .13));
 
-    } 
+      @media (prefers-color-scheme: dark) {
+        background-image: linear-gradient(rgba(146, 54, 149, .4), rgba(146, 54, 149, .4));
+      }
+    }
   }
 
   strong, b, h1, h2 {
