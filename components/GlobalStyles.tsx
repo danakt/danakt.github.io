@@ -138,7 +138,7 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 1.25;
 
     @media (max-width: 590px) {
-      margin: 45px 0 10px;
+      margin-top: 45px;
       font-size: 21px;
     }
   }
@@ -151,6 +151,7 @@ export const GlobalStyles = createGlobalStyle`
 
     @media (max-width: 590px) {
       font-size: 17px;
+      margin-top: 37.5px;
     }
   }
 
