@@ -6,7 +6,7 @@
     "dev": "next",
     "start": "next start",
     "build": "next build && next export",
-    "deploy": "next build && gh-pages -t -d ./out -b master"
+    "deploy": "npm run build && gh-pages -t -d ./out -b master"
   },
   "repository": {
     "type": "git",
