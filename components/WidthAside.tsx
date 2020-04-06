@@ -9,7 +9,7 @@ export const Aside = styled.div.attrs({ className: 'sans-serif' })`
   margin-top: 8px;
   font-size: 16px;
 
-  @media (max-width: 1310px) {
+  @media (max-width: 1150px) {
     position: static;
     margin-top: 20px;
   }
@@ -25,7 +25,7 @@ type Props = PropsWithChildren<{
 
 export const WithAside = (props: Props) => (
   <Wrapper>
-    <Aside>{props.aside}</Aside>
     {props.children}
+    <Aside>{props.aside}</Aside>
   </Wrapper>
 );
