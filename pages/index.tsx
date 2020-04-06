@@ -46,11 +46,11 @@ export default () => {
       <h1>Зачем этот сайт нужен?</h1>
       <p>
         Я купил домены{' '}
-        <a href="/" className="always-fresh">
+        <a href="//danakt.com" className="always-fresh">
           danakt.com
         </a>{' '}
         и{' '}
-        <a href="/" className="always-fresh">
+        <a href="//danakt.ru" className="always-fresh">
           danakt.ru
         </a>
         , чтобы их никто не занял вместо меня. А коли купил, надо чтобы что-то здесь было. Ну и еще для того, чтобы
