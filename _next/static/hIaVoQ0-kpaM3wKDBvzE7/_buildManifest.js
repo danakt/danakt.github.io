@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST = (function(a){return {"/":[a],"/danakt":[a],"/index":[a]}}("static\u002Fchunks\u002F481f7144320947730bcc9f3195b54efb8e98b6db.36fab0e7f7512d2f4b74.js"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
