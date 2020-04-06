@@ -22,6 +22,10 @@ export const Metrika = () => {
     s.src = 'https://mc.yandex.ru/metrika/watch.js';
 
     n?.parentNode?.insertBefore(s, n);
+
+    return () => {
+      s.remove();
+    };
   }, []);
 
   return null;
