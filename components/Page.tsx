@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { GlobalStyles } from './GlobalStyles';
 import styled from 'styled-components';
+import { Metrika } from './Metrika';
 
 const Body = styled.div`
   padding: 30px 0 100px;
@@ -72,6 +73,8 @@ export const Page = (props: Props) => {
         <Wrapper>
           <Content>{props.children}</Content>
         </Wrapper>
+
+        <Metrika />
       </Body>
     </>
   );
