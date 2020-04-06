@@ -33,7 +33,11 @@ export default () => {
 
       <WithAside aside={<Me />}>
         <p>
-          Меня зовут <a href="/danakt">Данакт</a>, я программист ВКонтакте.
+          Меня зовут{' '}
+          <a href="/danakt" title="Данакт FAQ">
+            Данакт
+          </a>
+          , я программист ВКонтакте.
         </p>
       </WithAside>
 

@@ -147,7 +147,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 24px;
     line-height: 1.25;
     font-weight: 700;
-    margin: 70px 0 0;
+    margin: 50px 0 0;
 
     @media (max-width: 590px) {
       font-size: 17px;

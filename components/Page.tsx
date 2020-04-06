@@ -6,7 +6,7 @@ import { GlobalStyles } from './GlobalStyles';
 import styled from 'styled-components';
 
 const Body = styled.div`
-  padding: 30px 0;
+  padding: 30px 0 100px;
 `;
 
 const Wrapper = styled.div`
