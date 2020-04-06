@@ -49,6 +49,7 @@ export const Page = (props: Props) => {
     <>
       <Head>
         <title>{props.title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700&display=swap&subset=cyrillic"
