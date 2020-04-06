@@ -55,10 +55,7 @@ export default () => {
       <ul>
         {socials.map((item, i) => (
           <li key={i}>
-            {item.title} —{' '}
-            <a className="always-fresh" href={item.url}>
-              {item.url.replace(/^https?:\/\//, '')}
-            </a>
+            {item.title} — <a href={item.url}>{item.url.replace(/^https?:\/\//, '')}</a>
           </li>
         ))}
       </ul>
