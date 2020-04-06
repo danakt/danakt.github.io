@@ -6,7 +6,7 @@
     "dev": "next",
     "start": "next start",
     "build": "next build && next export",
-    "deploy": "npm run build && gh-pages -t -d ./out -b master"
+    "deploy": "rimraf ./.next && npm run build && gh-pages -t -d ./out -b master"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "@types/styled-components": "4.1.8",
     "babel-plugin-styled-components": "^1.10.7",
     "gh-pages": "^2.2.0",
+    "rimraf": "^3.0.2",
     "typescript": "^3.8.3"
   },
   "dependencies": {
