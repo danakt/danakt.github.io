@@ -49,6 +49,8 @@ export const Page = (props: Props) => {
   return (
     <>
       <Head>
+        <Metrika />
+
         <title>{props.title}</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -88,8 +90,6 @@ export const Page = (props: Props) => {
         <Wrapper>
           <Content>{props.children}</Content>
         </Wrapper>
-
-        <Metrika />
       </Body>
     </>
   );
