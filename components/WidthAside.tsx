@@ -11,6 +11,7 @@ export const Aside = styled.div.attrs({ className: 'sans-serif' })`
 
   @media (max-width: 1150px) {
     position: static;
+    width: 100%;
     margin-top: 20px;
   }
 `;
