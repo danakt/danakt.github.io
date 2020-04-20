@@ -39,7 +39,7 @@ export default () => {
               Данакт
             </a>
           </Link>
-          , я программист ВКонтакте.
+          , я программист <a href="https://vk.com/about">ВКонтакте</a>.
         </p>
       </WithAside>
 
