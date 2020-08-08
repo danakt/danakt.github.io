@@ -2,31 +2,24 @@ import { Page } from '../components/Page';
 import Link from 'next/link';
 import { Me } from '../components/Me';
 import { WithAside } from '../components/WidthAside';
+import { useEffect, Fragment } from 'react';
+import { useMetrika } from '../hooks/useMetrika';
 
-export default () => {
-  const socials = [
-    {
-      title: 'ВК',
-      url: 'https://vk.com/danakt',
-    },
-    {
-      title: 'Гитхаб',
-      url: 'https://github.com/danakt',
-    },
-    {
-      title: 'Твиттер',
-      url: 'https://twitter.com/danakt_frost',
-    },
-    {
-      title: 'Телега',
-      url: 'https://t.me/danakt',
-    },
-    {
-      title: 'Инста',
-      url: 'https://instagram.com/danakt_frost',
-    },
-  ];
+const socials = [
+  { title: 'ВК', url: 'https://vk.com/danakt' },
+  { title: 'Гитхаб', url: 'https://github.com/danakt' },
+  { title: 'Твиттер', url: 'https://twitter.com/danakt_frost' },
+  { title: 'Телега', url: 'https://t.me/danakt' },
+  { title: 'Инста', url: 'https://instagram.com/danakt_frost' },
+];
 
+const someLinks = [
+  { title: 'За ВДВ', url: 'https://twitter.com/danakt_frost/status/1289817944550064128' },
+  { title: 'ПШЕ', url: 'https://пше.рф' },
+  { title: 'Данакт FAQ', url: '/danakt' },
+];
+
+export default function Index() {
   return (
     <Page title="Да это же Данакт">
       <h1>Привет!</h1>
@@ -65,6 +58,16 @@ export default () => {
           </li>
         ))}
       </ul>
+
+      <h1>Какие-то ссылки</h1>
+      <div>
+        {someLinks.map((item, i) => (
+          <Fragment key={i}>
+            {i > 0 && <> - </>}
+            <a href={item.url}>{item.title}</a>
+          </Fragment>
+        ))}
+      </div>
     </Page>
   );
-};
+}

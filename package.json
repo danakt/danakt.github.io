@@ -15,6 +15,7 @@
   "author": "Danakt Frost",
   "license": "MIT",
   "devDependencies": {
+    "@types/isomorphic-fetch": "^0.0.35",
     "@types/node": "^13.11.0",
     "@types/react": "^16.9.32",
     "@types/styled-components": "4.1.8",
@@ -24,6 +25,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "next": "^9.3.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
