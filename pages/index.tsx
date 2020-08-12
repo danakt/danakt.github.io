@@ -4,13 +4,23 @@ import { Me } from '../components/Me';
 import { WithAside } from '../components/WidthAside';
 import { useEffect, Fragment } from 'react';
 import { useMetrika } from '../hooks/useMetrika';
+import { Heading } from '../components/Heading';
 
 const socials = [
-  { title: 'ВК', url: 'https://vk.com/danakt' },
-  { title: 'Гитхаб', url: 'https://github.com/danakt' },
-  { title: 'Твиттер', url: 'https://twitter.com/danakt_frost' },
-  { title: 'Телега', url: 'https://t.me/danakt' },
-  { title: 'Инста', url: 'https://instagram.com/danakt_frost' },
+  {
+    url: 'https://vk.com/danakt',
+    title: (
+      <>профиль ВКонтакте; веду там рабочие переписки, и если вы мне напишите туда, то скорее всего я этого не увижу;</>
+    ),
+  },
+  { url: 'https://t.me/danakt', title: <>так что писать, желательно, в телегу;</> },
+
+  { url: 'https://github.com/danakt', title: <>код почти всего, что я делаю не под NDA, находится на гитхабе;</> },
+  { url: 'https://twitter.com/danakt_frost', title: <>все покеки из головы выкладываю в твиттер;</> },
+  {
+    url: 'https://instagram.com/danakt_frost',
+    title: <>также, можно подписаться на мой инстаграм, который я обновляю время от времени.</>,
+  },
 ];
 
 const someLinks = [
@@ -22,7 +32,7 @@ const someLinks = [
 export default function Index() {
   return (
     <Page title="Да это же Данакт">
-      <h1>Привет!</h1>
+      <Heading>Привет!</Heading>
 
       <WithAside aside={<Me />}>
         <p>
@@ -36,7 +46,7 @@ export default function Index() {
         </p>
       </WithAside>
 
-      <h1>Зачем этот сайт нужен?</h1>
+      <Heading>Зачем этот сайт нужен?</Heading>
       <p>
         Я купил домены{' '}
         <a href="//danakt.com" className="always-fresh">
@@ -50,16 +60,16 @@ export default function Index() {
         здесь были мои контакты.
       </p>
 
-      <h1>Мои контакты</h1>
+      <Heading>Мои контакты</Heading>
       <ul>
         {socials.map((item, i) => (
           <li key={i}>
-            {item.title} — <a href={item.url}>{item.url.replace(/^https?:\/\//, '')}</a>
+            <a href={item.url}>{item.url.replace(/^https?:\/\//, '')}</a> — {item.title}
           </li>
         ))}
       </ul>
 
-      <h1>Какие-то ссылки</h1>
+      {/* <Heading>Какие-то ссылки</Heading>
       <div>
         {someLinks.map((item, i) => (
           <Fragment key={i}>
@@ -67,7 +77,7 @@ export default function Index() {
             <a href={item.url}>{item.title}</a>
           </Fragment>
         ))}
-      </div>
+      </div> */}
     </Page>
   );
 }

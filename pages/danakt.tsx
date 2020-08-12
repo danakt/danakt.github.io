@@ -2,6 +2,14 @@ import { useRouter } from 'next/router';
 import { Page } from '../components/Page';
 import { WithAside } from '../components/WidthAside';
 import { usePageViews } from '../hooks/usePageViews';
+import styled from 'styled-components';
+import { Heading } from '../components/Heading';
+import { decline } from '../lib/decline';
+import { EyeIcon } from '../components/EyeIcon';
+
+const ArticleInfo = styled.div`
+  font-style: italic;
+`;
 
 export default function Danakt() {
   const { route } = useRouter();
@@ -9,28 +17,40 @@ export default function Danakt() {
 
   return (
     <Page title="Данакт FAQ">
-      <h1>Данакт FAQ</h1>
+      <Heading
+        label={
+          <>
+            06 апреля 2020
+            {typeof views === 'number' && views > -1 && (
+              <>
+                , <EyeIcon size={16} /> {views}
+                {/* {decline(views, ['просмотр', 'просмотра', 'просмотров'])} */}
+              </>
+            )}
+          </>
+        }
+      >
+        Данакт FAQ
+      </Heading>
 
-      <h2>А как тебя на самом деле зовут?</h2>
-      <WithAside aside={<>{typeof views === 'number' && views > -1 && <>{views} просмотров</>}</>}>
-        <p>
-          <em>Дана́кт</em> — моё настоящее имя, данное мне при рождении.
-        </p>
-      </WithAside>
+      <Heading level={2}>А как тебя на самом деле зовут?</Heading>
+      <p>
+        <em>Дана́кт</em> — моё настоящее имя, данное мне при рождении.
+      </p>
 
-      <h2>Ты не русский?</h2>
+      <Heading level={2}>Ты не русский?</Heading>
       <p>Я русский.</p>
 
-      <h2>А имя чьё?</h2>
+      <Heading level={2}>А имя чьё?</Heading>
       <p>
         <em>Данакт</em> это мужское русское личное имя греческого происхождения, восходит к др.-греч. Δάναξ (родительный
         падеж Δάνακτος). Было взято моими родителями из православного именослова.
       </p>
 
-      <h2>А что оно обозначает?</h2>
+      <Heading level={2}>А что оно обозначает?</Heading>
       <p>Ничего.</p>
 
-      <h2>Никогда не слышал(а).</h2>
+      <Heading level={2}>Никогда не слышал(а).</Heading>
       <p>Я тоже.</p>
 
       <p>
@@ -40,7 +60,7 @@ export default function Danakt() {
 
       <p>Практически не употребляется в настоящее время.</p>
 
-      <h2>А друзья тебя как называют?</h2>
+      <Heading level={2}>А друзья тебя как называют?</Heading>
 
       <p>
         В основном <em>Данакт</em>. Некоторые близкие друзья называют <em>Дан</em>. Бабушка — <em>Данюша</em>.
