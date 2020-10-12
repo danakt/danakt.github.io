@@ -132,29 +132,6 @@ export const GlobalStyles = createGlobalStyle`
     font-style: italic;
   }
 
-  h1 {
-    margin: 60px 0 10px;
-    font-size: 34px;
-    line-height: 1.25;
-
-    @media (max-width: 590px) {
-      margin-top: 45px;
-      font-size: 21px;
-    }
-  }
-
-  h2 {
-    font-size: 24px;
-    line-height: 1.25;
-    font-weight: 700;
-    margin: 50px 0 0;
-
-    @media (max-width: 590px) {
-      font-size: 17px;
-      margin-top: 37.5px;
-    }
-  }
-
   p {
     margin-top: 20px;
   }
@@ -168,6 +145,16 @@ export const GlobalStyles = createGlobalStyle`
 
       @media (max-width: 590px) {
         margin-bottom: 5px;
+      }
+
+      &::before {
+        content: "— ";
+        position: relative;
+        left: -6px;
+        margin-left: -21px;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 0px;
       }
     }
   }

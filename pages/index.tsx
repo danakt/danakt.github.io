@@ -2,34 +2,12 @@ import { Page } from '../components/Page';
 import Link from 'next/link';
 import { Me } from '../components/Me';
 import { WithAside } from '../components/WidthAside';
+import { Heading } from '../components/Heading';
 
-export default () => {
-  const socials = [
-    {
-      title: 'ВК',
-      url: 'https://vk.com/danakt',
-    },
-    {
-      title: 'Гитхаб',
-      url: 'https://github.com/danakt',
-    },
-    {
-      title: 'Твиттер',
-      url: 'https://twitter.com/danakt_frost',
-    },
-    {
-      title: 'Телега',
-      url: 'https://t.me/danakt',
-    },
-    {
-      title: 'Инста',
-      url: 'https://instagram.com/danakt_frost',
-    },
-  ];
-
+export default function Index() {
   return (
     <Page title="Да это же Данакт">
-      <h1>Привет!</h1>
+      <Heading>Привет!</Heading>
 
       <WithAside aside={<Me />}>
         <p>
@@ -39,11 +17,12 @@ export default () => {
               Данакт
             </a>
           </Link>
-          , я программист <a href="https://vk.com/about">ВКонтакте</a>.
+          , я программист.
         </p>
       </WithAside>
 
-      <h1>Зачем этот сайт нужен?</h1>
+      <Heading>Зачем этот сайт нужен?</Heading>
+
       <p>
         Я купил домены{' '}
         <a href="//danakt.com" className="always-fresh">
@@ -57,14 +36,31 @@ export default () => {
         здесь были мои контакты.
       </p>
 
-      <h1>Мои контакты</h1>
-      <ul>
-        {socials.map((item, i) => (
-          <li key={i}>
-            {item.title} — <a href={item.url}>{item.url.replace(/^https?:\/\//, '')}</a>
+      <Heading>Мои контакты</Heading>
+
+      <p>
+        <ul>
+          <li>
+            <a href="https://t.me/danakt">Телеграм</a> — лучший способ со мной связаться;
           </li>
-        ))}
-      </ul>
+
+          <li>
+            <a href="https://twitter.com/danakt_frost">Твиттер</a> — сюда иногда пишу;
+          </li>
+
+          <li>
+            <a href="https://instagram.com/danakt_frost">Инстаграм</a> — сюда иногда выкладываю фото;
+          </li>
+
+          <li>
+            <a href="https://github.com/danakt">Гитхаб</a> — сюда иногда выкладываю написанный в свободное время код.
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        Также, вы можете написать мне на почту: <a href="mailto: danakt@danakt.com">danakt@danakt.com</a>.
+      </p>
     </Page>
   );
-};
+}

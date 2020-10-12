@@ -53,6 +53,8 @@ export const Page = (props: Props) => {
 
         <title>{props.title}</title>
 
+        <link rel="icon" type="image/png" href="/favicon.png" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="stylesheet"
@@ -77,11 +79,11 @@ export const Page = (props: Props) => {
       <Body>
         <Breadcrumbs>
           {router.pathname === '/' ? (
-            'Главная'
+            'Данакт'
           ) : (
             <>
               <Link href="/">
-                <a>Главная</a>
+                <a className="always-fresh">Данакт</a>
               </Link>
               &nbsp;/&nbsp;{props.title}
             </>
