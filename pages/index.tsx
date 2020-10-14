@@ -1,6 +1,6 @@
 import { Page } from '../components/Page';
 import Link from 'next/link';
-import { Me } from '../components/Me';
+import { AsidePicture } from '../components/AsidePicture';
 import { WithAside } from '../components/WidthAside';
 import { Heading } from '../components/Heading';
 
@@ -9,7 +9,7 @@ export default function Index() {
     <Page title="Да это же Данакт">
       <Heading>Привет!</Heading>
 
-      <WithAside aside={<Me />}>
+      <WithAside aside={<AsidePicture src="/me2016.jpg" description="Это я в 2016" />}>
         <p>
           Меня зовут{' '}
           <Link href="/danakt">
