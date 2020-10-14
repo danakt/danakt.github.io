@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 export const Metrika = () => {
   return (
     <>
