@@ -134,10 +134,16 @@ export const GlobalStyles = createGlobalStyle`
 
   p {
     margin-top: 20px;
+
+    &.lead {
+      font-size: 28px;
+      line-height: 35px;
+      margin-bottom: 15px;
+    }
   }
 
   ul {
-    margin: 0 0 10px;
+    margin: 20px 0 10px;
     padding-left: 45px;
 
     li {

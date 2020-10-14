@@ -38,25 +38,23 @@ export default function Index() {
 
       <Heading>Мои контакты</Heading>
 
-      <p>
-        <ul>
-          <li>
-            <a href="https://t.me/danakt">Телеграм</a> — лучший способ со мной связаться;
-          </li>
+      <ul>
+        <li>
+          <a href="https://t.me/danakt">Телеграм</a> — лучший способ со мной связаться;
+        </li>
 
-          <li>
-            <a href="https://twitter.com/danakt_frost">Твиттер</a> — сюда иногда пишу;
-          </li>
+        <li>
+          <a href="https://twitter.com/danakt_frost">Твиттер</a> — сюда иногда пишу;
+        </li>
 
-          <li>
-            <a href="https://instagram.com/danakt_frost">Инстаграм</a> — сюда иногда выкладываю фото;
-          </li>
+        <li>
+          <a href="https://instagram.com/danakt_frost">Инстаграм</a> — сюда иногда выкладываю фото;
+        </li>
 
-          <li>
-            <a href="https://github.com/danakt">Гитхаб</a> — сюда иногда выкладываю написанный в свободное время код.
-          </li>
-        </ul>
-      </p>
+        <li>
+          <a href="https://github.com/danakt">Гитхаб</a> — сюда иногда выкладываю написанный в свободное время код.
+        </li>
+      </ul>
 
       <p>
         Также, вы можете написать мне на почту: <a href="mailto: danakt@danakt.com">danakt@danakt.com</a>.

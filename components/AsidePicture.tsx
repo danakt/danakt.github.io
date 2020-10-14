@@ -18,6 +18,20 @@ export const ImageWrapper = styled.div`
       width: 100px;
     }
   }
+
+  img.with-video {
+    display: none;
+
+    @media (max-width: 1150px) {
+      display: block;
+    }
+  }
+
+  video {
+    @media (max-width: 1150px) {
+      display: none;
+    }
+  }
 `;
 
 export const Text = styled.div`
@@ -37,11 +51,11 @@ type Props = {
 export const AsidePicture = (props: Props) => (
   <Wrapper>
     <>
-      <a href={props.src}>
+      <a href={props.videoSrc ?? props.src}>
         <ImageWrapper>
-          {props.videoSrc == null ? (
-            <img src={props.src} alt={props.description} />
-          ) : (
+          <img className={props.videoSrc != null ? 'with-video' : ''} src={props.src} alt={props.description} />
+
+          {props.videoSrc != null && (
             <video preload="auto" autoPlay loop muted poster={props.src}>
               <source src={props.videoSrc} type={props.videoType} />
             </video>

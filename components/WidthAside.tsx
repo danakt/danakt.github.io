@@ -14,6 +14,10 @@ export const Aside = styled.div.attrs({ className: 'sans-serif' })`
     width: 100%;
     margin-top: 20px;
   }
+
+  p:first-child {
+    margin-top: 0;
+  }
 `;
 
 export const Wrapper = styled.div`
