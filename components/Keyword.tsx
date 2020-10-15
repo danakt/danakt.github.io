@@ -7,4 +7,9 @@ export const Keyword = styled.mark`
   margin: 3px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 0.9em;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #212121;
+    color: #fff;
+  }
 `;
