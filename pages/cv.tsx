@@ -76,6 +76,24 @@ export default function Cv() {
               <br />
               <em>1 год 5 месяцев</em>
             </p>
+
+            <KeywordsWrapper>
+              {[
+                'Javascript',
+                'React',
+                'Typescript',
+                'PHP',
+                'kPHP',
+                'Open Source',
+                'UI Kit',
+                'Node.js',
+                'ООП',
+                'ФП',
+                'Super App',
+              ].map((item, i) => (
+                <Keyword key={i}>{item}</Keyword>
+              ))}
+            </KeywordsWrapper>
           </>
         }
       >
@@ -101,24 +119,6 @@ export default function Cv() {
         .
       </p>
 
-      <KeywordsWrapper>
-        {[
-          'Javascript',
-          'React',
-          'Typescript',
-          'PHP',
-          'kPHP',
-          'Open Source',
-          'UI Kit',
-          'Node.js',
-          'ООП',
-          'ФП',
-          'Super App',
-        ].map((item, i) => (
-          <Keyword key={i}>{item}</Keyword>
-        ))}
-      </KeywordsWrapper>
-
       <WithAside
         aside={
           <>
@@ -127,6 +127,25 @@ export default function Cv() {
               <br />
               <em>1 год</em>
             </p>
+
+            <KeywordsWrapper>
+              {[
+                'Javascript',
+                'React',
+                'Typescript',
+                'Next.js',
+                'Node.js',
+                'LDAP',
+                'Docker',
+                'Ramda',
+                'Open Source',
+                'Unit testing',
+                'UI Kit',
+                'ФП',
+              ].map((item, i) => (
+                <Keyword key={i}>{item}</Keyword>
+              ))}
+            </KeywordsWrapper>
           </>
         }
       >
@@ -153,25 +172,6 @@ export default function Cv() {
         , конструктор баннеров, приложение для проверки орфографии и др.
       </p>
 
-      <KeywordsWrapper>
-        {[
-          'Javascript',
-          'React',
-          'Typescript',
-          'Next.js',
-          'Node.js',
-          'LDAP',
-          'Docker',
-          'Ramda',
-          'Open Source',
-          'Unit testing',
-          'UI Kit',
-          'ФП',
-        ].map((item, i) => (
-          <Keyword key={i}>{item}</Keyword>
-        ))}
-      </KeywordsWrapper>
-
       <WithAside
         aside={
           <>
@@ -180,6 +180,33 @@ export default function Cv() {
               <br />
               <em>9 месяцев</em>
             </p>
+
+            <KeywordsWrapper>
+              {[
+                'Javascript',
+                'React',
+                'Typescript',
+                'Flow',
+                'Redux',
+                'Node.js',
+                'jQuery',
+                'PHP',
+                'Next.js',
+                'MySQL',
+                'Bash',
+                'Eherium',
+                'Bitcoin',
+                'Smart Contract',
+                'Etherscan',
+                'Open Source',
+                'Unit Testing',
+                'High Load',
+                'ООП',
+                'ФП',
+              ].map((item, i) => (
+                <Keyword key={i}>{item}</Keyword>
+              ))}
+            </KeywordsWrapper>
           </>
         }
       >
@@ -198,33 +225,6 @@ export default function Cv() {
 
       <p>Разработал внутреннее приложение для финансовых данных.</p>
 
-      <KeywordsWrapper>
-        {[
-          'Javascript',
-          'React',
-          'Typescript',
-          'Flow',
-          'Redux',
-          'Node.js',
-          'jQuery',
-          'PHP',
-          'Next.js',
-          'MySQL',
-          'Bash',
-          'Eherium',
-          'Bitcoin',
-          'Smart Contract',
-          'Etherscan',
-          'Open Source',
-          'Unit Testing',
-          'High Load',
-          'ООП',
-          'ФП',
-        ].map((item, i) => (
-          <Keyword key={i}>{item}</Keyword>
-        ))}
-      </KeywordsWrapper>
-
       <WithAside
         aside={
           <>
@@ -233,6 +233,30 @@ export default function Cv() {
               <br />
               <em>1 год 4 месяца</em>
             </p>
+
+            <KeywordsWrapper>
+              {[
+                'Javascript',
+                'React',
+                'Typescript',
+                'Redux',
+                'MobX',
+                'jQuery',
+                'Node.js',
+                'SCORM',
+                'WebRTC',
+                'TURN',
+                'STUN',
+                'ООП',
+                'WebSocket',
+                'Adobe Photoshop',
+                'Unit testing',
+                'Chrome extentions',
+                'SVG',
+              ].map((item, i) => (
+                <Keyword key={i}>{item}</Keyword>
+              ))}
+            </KeywordsWrapper>
           </>
         }
       >
@@ -249,30 +273,6 @@ export default function Cv() {
         Поначалу работал как дизайнер/верстальщик, успел нарисовать несколько иллюстраций и интерфейсов веб-приложений в
         Adobe Photoshop.
       </p>
-
-      <KeywordsWrapper>
-        {[
-          'Javascript',
-          'React',
-          'Typescript',
-          'Redux',
-          'MobX',
-          'jQuery',
-          'Node.js',
-          'SCORM',
-          'WebRTC',
-          'TURN',
-          'STUN',
-          'ООП',
-          'WebSocket',
-          'Adobe Photoshop',
-          'Unit testing',
-          'Chrome extentions',
-          'SVG',
-        ].map((item, i) => (
-          <Keyword key={i}>{item}</Keyword>
-        ))}
-      </KeywordsWrapper>
 
       <Heading>Некоммерческая деятельность</Heading>
 
