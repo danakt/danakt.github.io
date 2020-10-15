@@ -2,7 +2,8 @@ import { Heading } from '../components/Heading';
 import { AsidePicture } from '../components/AsidePicture';
 import { Page } from '../components/Page';
 import { WithAside } from '../components/WidthAside';
-import { Label } from '../components/Label';
+import { Keyword } from '../components/Keyword';
+import { KeywordsWrapper } from '../components/KeywordsWrapper';
 
 export default function Cv() {
   return (
@@ -55,8 +56,7 @@ export default function Cv() {
 
       <p>
         Я занимаюсь профессиональной разработкой на протяжении последних четырёх лет. За это время я научился находить
-        общий язык практически с любым человеком. Готов отстаивать свою точку зрения, но также умею проигрывать и
-        принимать чужую.
+        общий язык практически с любым человеком. Умею отстаивать свою точку зрения, однако открыт к чужой.
       </p>
 
       <p>
@@ -82,14 +82,7 @@ export default function Cv() {
         <Heading level={2}>ВКонтакте</Heading>
       </WithAside>
 
-      <p>
-        Работал в команде API, разрабатывал новую платформу, которая, к сожалению, всё ещё под NDA. Применял TypeScript,
-        React и{' '}
-        <a href="https://ru.wikipedia.org/wiki/KPHP" target="_blank" rel="noopener noreferrer">
-          kPHP
-        </a>
-        .
-      </p>
+      <p>Работал в команде API, разрабатывал новую платформу, которая, к сожалению, всё ещё под NDA.</p>
 
       <p>
         Работал в команде разработки инструментов для направления суперприложения. Написал и переделал несколько
@@ -107,6 +100,24 @@ export default function Cv() {
         </a>
         .
       </p>
+
+      <KeywordsWrapper>
+        {[
+          'Javascript',
+          'React',
+          'Typescript',
+          'PHP',
+          'kPHP',
+          'Open Source',
+          'UI Kit',
+          'Node.js',
+          'ООП',
+          'ФП',
+          'Super App',
+        ].map((item, i) => (
+          <Keyword key={i}>{item}</Keyword>
+        ))}
+      </KeywordsWrapper>
 
       <WithAside
         aside={
@@ -139,9 +150,27 @@ export default function Cv() {
         <a href="https://design.alfabank.ru/news/mail-editor" target="_blank" rel="noopener noreferrer">
           конструктор писем
         </a>
-        , конструктор баннеров, приложение для проверки орфографии и др. Использовал React, TypeScript, бэкенд на
-        Node.js, интегрировал LDAP.
+        , конструктор баннеров, приложение для проверки орфографии и др.
       </p>
+
+      <KeywordsWrapper>
+        {[
+          'Javascript',
+          'React',
+          'Typescript',
+          'Next.js',
+          'Node.js',
+          'LDAP',
+          'Docker',
+          'Ramda',
+          'Open Source',
+          'Unit testing',
+          'UI Kit',
+          'ФП',
+        ].map((item, i) => (
+          <Keyword key={i}>{item}</Keyword>
+        ))}
+      </KeywordsWrapper>
 
       <WithAside
         aside={
@@ -165,12 +194,36 @@ export default function Cv() {
         . Переписал фронтенд нескольких разделов с jQuery на React.{' '}
       </p>
 
-      <p>
-        Разработал фронтенд и бэкенд мониторинг-системы криптовалютных игр. Использовал React, Typescript, Next.js,
-        бэкенд на Node.js и MySQL.
-      </p>
+      <p>Разработал фронтенд и микросервисный бэкенд мониторинг-системы криптовалютных игр.</p>
 
-      <p>Разработал внутреннее приложение для удобного взаимодействия с финансовыми данными.</p>
+      <p>Разработал внутреннее приложение для финансовых данных.</p>
+
+      <KeywordsWrapper>
+        {[
+          'Javascript',
+          'React',
+          'Typescript',
+          'Flow',
+          'Redux',
+          'Node.js',
+          'jQuery',
+          'PHP',
+          'Next.js',
+          'MySQL',
+          'Bash',
+          'Eherium',
+          'Bitcoin',
+          'Smart Contract',
+          'Etherscan',
+          'Open Source',
+          'Unit Testing',
+          'High Load',
+          'ООП',
+          'ФП',
+        ].map((item, i) => (
+          <Keyword key={i}>{item}</Keyword>
+        ))}
+      </KeywordsWrapper>
 
       <WithAside
         aside={
@@ -188,14 +241,38 @@ export default function Cv() {
 
       <p>
         Разрабатывал B2B продукты для дистанционного обучения. Сделал интерактивные курсы для сотрудников Северстали и
-        Газпрома. Разработал платформу для проведения вебинаров для бизнеса. Использовал jQuery, React, Typescript,
-        работал с WebRTC.
+        Газпрома. Разработал платформу для проведения вебинаров для бизнеса. Разработал Google Chome расширение для
+        удобного взаимодействия ведущего с вебинаром.
       </p>
 
       <p>
         Поначалу работал как дизайнер/верстальщик, успел нарисовать несколько иллюстраций и интерфейсов веб-приложений в
         Adobe Photoshop.
       </p>
+
+      <KeywordsWrapper>
+        {[
+          'Javascript',
+          'React',
+          'Typescript',
+          'Redux',
+          'MobX',
+          'jQuery',
+          'Node.js',
+          'SCORM',
+          'WebRTC',
+          'TURN',
+          'STUN',
+          'ООП',
+          'WebSocket',
+          'Adobe Photoshop',
+          'Unit testing',
+          'Chrome extentions',
+          'SVG',
+        ].map((item, i) => (
+          <Keyword key={i}>{item}</Keyword>
+        ))}
+      </KeywordsWrapper>
 
       <Heading>Некоммерческая деятельность</Heading>
 
