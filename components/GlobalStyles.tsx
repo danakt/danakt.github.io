@@ -139,6 +139,11 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 28px;
       line-height: 35px;
       margin-bottom: 15px;
+
+      @media (max-width: 590px) {
+        text-align: center;
+        font-size: 24px;
+      }
     }
   }
 

@@ -64,7 +64,7 @@ export default function Cv() {
         технологиям.
       </p>
 
-      <p className="lead">Рассматриваю предложения от 230 000 ₽.</p>
+      <p className="lead">Рассматриваю предложения от 230&nbsp;000&nbsp;₽.</p>
 
       <Heading>Опыт работы</Heading>
 
