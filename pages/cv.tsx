@@ -117,9 +117,16 @@ export default function Cv() {
           VK Bridge
         </a>{' '}
         и связанные с ней: разработал для неё тайпинги событий для автосаджеста параметров в IDE пользователя
-        библиотеки, переписал с событий на промисы, разработал{' '}
-        <a href="https://github.com/vkcom/vk-bridge-mock">библиотеку</a> для «мока» событий. Участвовал в разработке
-        UI-библиотеки{' '}
+        библиотеки, переписал с событий на промисы, разработал Middleware API для создания промежуточных обработчиков
+        событий. Разработал{' '}
+        <a href="https://github.com/vkcom/vk-bridge-mock" target="_blank" rel="noopener noreferrer">
+          библиотеку
+        </a>{' '}
+        для «мока» событий, написал{' '}
+        <a href="https://github.com/VKCOM/vk-mini-apps-api" target="_blank" rel="noopener noreferrer">
+          библиотеку
+        </a>{' '}
+        для упрощённого взаимодействия с VK Bridge. Участвовал в разработке UI-библиотеки{' '}
         <a href="https://github.com/VKCOM/VKUI" target="_blank" rel="noopener noreferrer">
           VKUI
         </a>
