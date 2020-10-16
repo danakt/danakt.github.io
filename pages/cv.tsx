@@ -56,12 +56,12 @@ export default function Cv() {
 
       <p>
         Я занимаюсь профессиональной разработкой на протяжении последних четырёх лет. За это время я научился находить
-        общий язык практически с любым человеком. Умею отстаивать свою точку зрения, однако открыт к чужой.
+        общий язык практически с любым человеком. Умею отстаивать свою точку зрения, но открыт и к чужой.
       </p>
 
       <p>
         Ищу себе крутую живую команду с интересным продуктом, на который можно активно влиять. Не привязываюсь к
-        технологиям. Хочу изучать новые языки.
+        технологиям. Очень хочу изучать новые языки.
       </p>
 
       <p className="lead">Рассматриваю предложения от 230&nbsp;000&nbsp;₽.</p>
@@ -79,11 +79,11 @@ export default function Cv() {
 
             <KeywordsWrapper>
               {[
-                'Javascript',
+                'JavaScript',
                 'React',
-                'Typescript',
-                'PHP',
+                'TypeScript',
                 'kPHP',
+                'PHP',
                 'Open Source',
                 'UI Kit',
                 'Node.js',
@@ -100,15 +100,30 @@ export default function Cv() {
         <Heading level={2}>ВКонтакте</Heading>
       </WithAside>
 
-      <p>Работал в команде API, разрабатывал новую платформу, которая, к сожалению, всё ещё под NDA.</p>
+      <p>
+        Работал в команде API, разрабатывал новую платформу, которая, к сожалению, всё ещё под NDA. Поддерживал фронтенд
+        сервиса для{' '}
+        <a href="https://vk.com/cc" target="_blank" rel="noopener noreferrer">
+          сокращения ссылок
+        </a>
+        , добавил QR-коды для сокращённых ссылок.
+      </p>
 
       <p>
-        Работал в команде разработки инструментов для направления суперприложения. Написал и переделал несколько
-        опенсорс-библиотек для разработки{' '}
-        <a href="https://vk.com/services" target="_blank" rel="noopener noreferrer">
-          миниаппов
+        Работал в команде разработки инструментов для направления суперприложения. Разрабатывал инструменты для
+        взаимодействия ВК и <a href="https://vk.com/services">миниаппов</a> сторонних разработчиков. Поддерживал
+        библиотеку{' '}
+        <a href="https://github.com/vkcom/vk-bridge" target="_blank" rel="noopener noreferrer">
+          VK Bridge
+        </a>{' '}
+        и связанные с ней: разработал для неё тайпинги событий для автосаджеста параметров в IDE пользователя
+        библиотеки, переписал с событий на промисы, разработал{' '}
+        <a href="https://github.com/vkcom/vk-bridge-mock">библиотеку</a> для «мока» событий. Участвовал в разработке
+        UI-библиотеки{' '}
+        <a href="https://github.com/VKCOM/VKUI" target="_blank" rel="noopener noreferrer">
+          VKUI
         </a>
-        . Участвовал в разработке ui-библиотеки <a href="https://github.com/VKCOM/VKUI">VKUI</a>.
+        , переписал большую часть библиотеки на TypeScript
       </p>
 
       <p>
@@ -130,16 +145,16 @@ export default function Cv() {
 
             <KeywordsWrapper>
               {[
-                'Javascript',
+                'JavaScript',
                 'React',
-                'Typescript',
+                'TypeScript',
                 'Next.js',
                 'Node.js',
                 'LDAP',
                 'Docker',
                 'Ramda',
                 'Open Source',
-                'Unit testing',
+                'Unit Testing',
                 'UI Kit',
                 'ФП',
               ].map((item, i) => (
@@ -157,7 +172,7 @@ export default function Cv() {
         <a href="https://design.alfabank.ru" target="_blank" rel="noopener noreferrer">
           дизайн-системы
         </a>{' '}
-        Альфа-Банка. Мейнтенил разработку ui-библиотеки{' '}
+        Альфа-Банка. Мейнтенил разработку UI-библиотеки{' '}
         <a href="https://github.com/alfa-laboratory/arui-feather" target="_blank" rel="noopener noreferrer">
           ARUI Feather
         </a>
@@ -169,7 +184,8 @@ export default function Cv() {
         <a href="https://design.alfabank.ru/news/mail-editor" target="_blank" rel="noopener noreferrer">
           конструктор писем
         </a>
-        , конструктор баннеров, приложение для проверки орфографии и др.
+        , конструктор баннеров, приложение для проверки орфографии. Конструкторы в дальнейшем сократили большое
+        количество человеко-часов сотрудников, верстающих письма и баннеры.
       </p>
 
       <WithAside
@@ -183,9 +199,9 @@ export default function Cv() {
 
             <KeywordsWrapper>
               {[
-                'Javascript',
+                'JavaScript',
                 'React',
-                'Typescript',
+                'TypeScript',
                 'Flow',
                 'Redux',
                 'Node.js',
@@ -194,6 +210,7 @@ export default function Cv() {
                 'Next.js',
                 'MySQL',
                 'Bash',
+                'Docker',
                 'Eherium',
                 'Bitcoin',
                 'Smart Contract',
@@ -203,6 +220,7 @@ export default function Cv() {
                 'High Load',
                 'ООП',
                 'ФП',
+                'Adobe Photoshop',
               ].map((item, i) => (
                 <Keyword key={i}>{item}</Keyword>
               ))}
@@ -218,12 +236,14 @@ export default function Cv() {
         <a href="https://hitbtc.com" target="_blank" rel="noopener noreferrer">
           HitBTC
         </a>
-        . Переписал фронтенд нескольких разделов с jQuery на React.{' '}
+        . Впервые работал с хайлоад приложением. Переписал фронтенд нескольких разделов с jQuery на React.
       </p>
 
-      <p>Разработал фронтенд и микросервисный бэкенд мониторинг-системы криптовалютных игр.</p>
+      <p>
+        Нарисовал дизайн, разработал фронтенд и микросервисный бэкенд MVP-версии мониторинг-системы криптовалютных игр.
+      </p>
 
-      <p>Разработал внутреннее приложение для финансовых данных.</p>
+      <p>Разработал внутреннее приложение для работы с финансовыми данными.</p>
 
       <WithAside
         aside={
@@ -236,9 +256,9 @@ export default function Cv() {
 
             <KeywordsWrapper>
               {[
-                'Javascript',
+                'JavaScript',
                 'React',
-                'Typescript',
+                'TypeScript',
                 'Redux',
                 'MobX',
                 'jQuery',
@@ -250,7 +270,7 @@ export default function Cv() {
                 'ООП',
                 'WebSocket',
                 'Adobe Photoshop',
-                'Unit testing',
+                'Unit Testing',
                 'Chrome extentions',
                 'SVG',
               ].map((item, i) => (
@@ -264,14 +284,28 @@ export default function Cv() {
       </WithAside>
 
       <p>
-        Разрабатывал B2B продукты для дистанционного обучения. Сделал интерактивные курсы для сотрудников Северстали и
-        Газпрома. Разработал платформу для проведения вебинаров для бизнеса. Разработал Google Chome расширение для
-        удобного взаимодействия ведущего с вебинаром.
+        Разрабатывал B2B продукты для дистанционного обучения сотрудников компаний. За время работы в ГиперМетоде вырос
+        из верстальщика-дизайнера до полноценного JavaScript-разработчика.
       </p>
 
       <p>
-        Поначалу работал как дизайнер/верстальщик, успел нарисовать несколько иллюстраций и интерфейсов веб-приложений в
-        Adobe Photoshop.
+        Нарисовал, разработал интерфейс, а также несколько иллюстраций для интерактивного курса для сотрудников
+        Северстали.
+      </p>
+
+      <p>
+        Впервые применил React и внедрил его в старые продукты компании. Заменил в продуктах компании старый сборщик на
+        Ruby на Webpack.
+      </p>
+
+      <p>
+        Нарисовал дизайн и разработал лендинг для конструктора курсов. Разработал адаптивный шаблон для конструктора.
+        Научился взаимодействовать с системами управления обучением при помощи SCORM.
+      </p>
+
+      <p>
+        Разработал новый инструмент для проведения вебинаров для бизнеса. Впервые использовал TypeScript, обучился
+        работе с WebRTC и веб-сокетами. Написал Chrome-расширение для записи вебинара преподавателем.
       </p>
 
       <Heading>Некоммерческая деятельность</Heading>
