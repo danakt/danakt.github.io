@@ -322,7 +322,15 @@ export default function Cv() {
         <a href="https://twitter.com/spb_frontend" target="_blank" rel="noopener noreferrer">
           SPB Frontend
         </a>
-        . С 2017-го года провожу фронтенд-завтраки (пока на паузе из-за карантина).
+        . С 2017-го года провожу{' '}
+        <a
+          href="https://paperpaper.ru/photos/pyat-zavtrakov-v-peterburge-s-bespla/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          фронтенд-завтраки
+        </a>{' '}
+        (пока на паузе из-за карантина).
       </p>
       <p>
         Выступал с профориентационными лекциями для школьников в рамках «
