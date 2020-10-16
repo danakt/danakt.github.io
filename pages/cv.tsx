@@ -354,7 +354,15 @@ export default function Cv() {
 
       <p>
         <em>
-          P.P.S. Богер, спасибо за{' '}
+          P.P.S.{' '}
+          <a
+            href="https://www.notion.so/Dima-Boger-Python-Team-Leader-ac2893048e944dcb90a337fb664d964e"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Богер
+          </a>
+          , спасибо за{' '}
           <a
             href="https://www.notion.so/bogers/Ivan-Ivanov-Metameme-master-f04bc549371d4cdaaf7b97ce421eca18"
             target="_blank"
