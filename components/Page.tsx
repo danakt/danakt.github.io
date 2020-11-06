@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { GlobalStyles } from './GlobalStyles';
 import styled from 'styled-components';
-import { Metrika } from './Metrika';
 
 const Body = styled.div`
   padding: 30px 0 100px;
@@ -48,8 +47,6 @@ export const Page = (props: Props) => {
   return (
     <>
       <Head>
-        <Metrika />
-
         <title>{props.title}</title>
 
         <link rel="icon" type="image/png" href="/favicon.png" />
@@ -71,11 +68,21 @@ export const Page = (props: Props) => {
         <meta name="twitter:description" content="" />
         <meta name="twitter:site" content="@danakt_frost" />
         <meta name="twitter:image:src" content={ogImage} />
+
+        {/* Metrika */}
+        <script src="/metrika.js" />
       </Head>
 
       <GlobalStyles />
 
       <Body>
+        {/* Metrika */}
+        <noscript>
+          <div>
+            <img src="https://mc.yandex.ru/watch/38138395" style={{ position: 'absolute', left: '-9999px' }} alt="" />
+          </div>
+        </noscript>
+
         <Breadcrumbs>
           {router.pathname === '/' ? (
             'Данакт'
