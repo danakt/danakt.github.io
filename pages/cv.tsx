@@ -21,9 +21,8 @@ export default function Cv() {
         }
       >
         <p>
-          Если вы читаете это, значит в текущий момент я ищу работу. Коротко обо мне: всесторонне разбираюсь во
-          фронтенде, люблю TypeScript и React, базово шарю в бэкенде, быстро адаптируюсь к новым технологиям, хорошо
-          общаюсь с людьми.
+          Коротко обо мне: всесторонне разбираюсь во фронтенде, люблю TypeScript и React, базово шарю в бэкенде, быстро
+          адаптируюсь к новым технологиям, хорошо общаюсь с людьми.
         </p>
       </WithAside>
 
@@ -67,6 +66,24 @@ export default function Cv() {
       <p className="lead">Рассматриваю предложения от 230&nbsp;000&nbsp;₽.</p>
 
       <Heading>Опыт работы</Heading>
+
+      <WithAside
+        aside={
+          <>
+            <p>Апрель 2021 — настоящее время</p>
+
+            <KeywordsWrapper>
+              {['JavaScript', 'React', 'TypeScript'].map((item, i) => (
+                <Keyword key={i}>{item}</Keyword>
+              ))}
+            </KeywordsWrapper>
+          </>
+        }
+      >
+        <Heading level={2}>Tinkoff</Heading>
+      </WithAside>
+
+      <p>Разрабатываю интерфейс для банкоматов</p>
 
       <WithAside
         aside={
