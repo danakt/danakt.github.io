@@ -63,7 +63,7 @@ export default function Cv() {
         технологиям. Очень хочу изучать новые языки.
       </p>
 
-      <p className="lead">Рассматриваю предложения от 230&nbsp;000&nbsp;₽.</p>
+      <p className="lead">Рассматриваю предложения от 280&nbsp;000&nbsp;₽.</p>
 
       <Heading>Опыт работы</Heading>
 
