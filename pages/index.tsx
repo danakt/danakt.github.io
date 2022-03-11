@@ -44,6 +44,10 @@ export default function Index() {
         </li>
 
         <li>
+          <a href="https://vk.com/danakt">ВК</a> — запасной вариант связи;
+        </li>
+
+        <li>
           <a href="https://twitter.com/danakt_frost">Твиттер</a> — сюда иногда пишу;
         </li>
 
