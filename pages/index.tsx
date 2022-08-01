@@ -43,9 +43,9 @@ export default function Index() {
           <a href="https://t.me/danakt">Телеграм</a> — лучший способ со мной связаться;
         </li>
 
-        <li>
+        {/* <li>
           <a href="https://vk.com/danakt">ВК</a> — запасной вариант связи;
-        </li>
+        </li> */}
 
         <li>
           <a href="https://twitter.com/danakt_frost">Твиттер</a> — сюда иногда пишу;
@@ -60,9 +60,9 @@ export default function Index() {
         </li>
       </ul>
 
-      <p>
+      {/* <p>
         Также, вы можете написать мне на почту: <a href="mailto: danakt@danakt.com">danakt@danakt.com</a>.
-      </p>
+      </p> */}
     </Page>
   );
 }
