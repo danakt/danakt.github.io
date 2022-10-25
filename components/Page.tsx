@@ -31,16 +31,23 @@ const Content = styled.div`
 `;
 
 const Breadcrumbs = styled.strong`
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 400;
   font-style: italic;
+
+  @media (max-width: 590px) {
+    font-size: 16px;
+  }
 `;
 
 type Props = React.PropsWithChildren<{
   title: string;
+  lang?: 'en' | 'ru';
 }>;
 
 export const Page = (props: Props) => {
+  const lang = props.lang ?? 'ru';
+  const name = lang === 'en' ? 'Danakt' : 'Данакт';
   const router = useRouter();
   const ogImage = `https://motif.imgix.com/i?url=https://danakt.com${router.route}&image_url=null&color=ffffff&logo_url=&logo_alignment=bottom%2Cright&text_alignment=middle%2Ccenter&logo_padding=0&font_family=Charter&text_color=000`;
 
@@ -85,11 +92,11 @@ export const Page = (props: Props) => {
 
         <Breadcrumbs>
           {router.pathname === '/' ? (
-            'Данакт'
+            name
           ) : (
             <>
               <Link href="/">
-                <a className="always-fresh">Данакт</a>
+                <a className="always-fresh">{name}</a>
               </Link>
               &nbsp;/&nbsp;{props.title}
             </>

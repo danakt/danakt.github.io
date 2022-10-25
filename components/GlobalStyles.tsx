@@ -76,7 +76,7 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
 
     @media (max-width: 590px) {
-      font-size: 17px;
+      font-size: 16px;
       padding: 0 15px;
     }
 
@@ -153,6 +153,10 @@ export const GlobalStyles = createGlobalStyle`
 
     li {
       margin-bottom: 10px;
+
+      ul {
+        margin-top: 10px;
+      }
 
       @media (max-width: 590px) {
         margin-bottom: 5px;

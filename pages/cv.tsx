@@ -2,100 +2,232 @@ import { Heading } from '../components/Heading';
 import { AsidePicture } from '../components/AsidePicture';
 import { Page } from '../components/Page';
 import { WithAside } from '../components/WidthAside';
-import { Keyword } from '../components/Keyword';
-import { KeywordsWrapper } from '../components/KeywordsWrapper';
+import { Keywords } from '../components/Keywords';
 
 export default function Cv() {
   return (
-    <Page title="Резюме">
-      <Heading>Привет, я Данакт, JavaScript&nbsp;разработчик</Heading>
-
+    <Page title="Curriculum vitae" lang="en">
       <WithAside
         aside={
-          <AsidePicture
-            src="/me2020.jpg"
-            videoSrc="/me2020.mp4"
-            videoType="video/mp4"
-            description="Так я обычно выгляжу никогда "
-          />
+          <>
+            <AsidePicture
+              src="/me2020.jpg"
+              videoSrc="/me2020.mp4"
+              videoType="video/mp4"
+              description="This is how I usually never look"
+            />
+
+            <p>
+              <strong>Contacts:</strong>
+
+              <ul>
+                <li>Almaty, Kazakhstan</li>
+
+                <li>
+                  Phone:{' '}
+                  <noindex>
+                    <a href="tel:+77054346140">+7 (705) 434-61-40</a>
+                  </noindex>
+                </li>
+
+                <li>
+                  Email:{' '}
+                  <noindex>
+                    <a href="mailto:danakt@protonmail.com">danakt@protonmail.com</a>
+                  </noindex>
+                </li>
+
+                <li>
+                  Telegram:{' '}
+                  <a href="https://t.me/danakt" target="_blank" rel="noreferrer noopener">
+                    @danakt
+                  </a>
+                  <br />
+                  <em>(quick response)</em>
+                </li>
+
+                <li>
+                  LinkedIn:{' '}
+                  <a href="https://www.linkedin.com/in/danakt/" target="_blank" rel="noreferrer noopener">
+                    linkedin.com/in/danakt
+                  </a>
+                </li>
+
+                <li>
+                  GitHub:{' '}
+                  <a href="https://github.com/danakt" target="_blank" rel="noreferrer noopener">
+                    github.com/danakt
+                  </a>
+                </li>
+              </ul>
+            </p>
+          </>
         }
       >
+        <Heading>Danakt Saushkin</Heading>
+
         <p>
-          Коротко обо мне: всесторонне разбираюсь во фронтенде, люблю TypeScript и React, базово шарю в бэкенде, быстро
-          адаптируюсь к новым технологиям, хорошо общаюсь с людьми.
+          JavaScript developer with over six years of professional development experience seeking remote full-time
+          frontend developer position
         </p>
       </WithAside>
 
-      <p>Ищу работу в Санкт-Петербурге или удалённо. Готов к командировкам, не готов к переезду.</p>
-
-      <p>Со мной можно связаться:</p>
-
-      <ul>
-        <li>
-          через телеграм:{' '}
-          <a href="https://t.me/danakt" target="_blank" rel="noreferrer noopener">
-            @danakt
-          </a>{' '}
-          <em>— предпочтительный способ связи</em>;
-        </li>
-
-        <li>
-          по номеру телефона:{' '}
-          <noindex>
-            <a href="tel:+79520730288">+ 7 (952) 073–02–88</a>;
-          </noindex>
-        </li>
-        <li>
-          написав на почту:{' '}
-          <noindex>
-            <a href="mailto:danakt@danakt.com">danakt@danakt.com</a>.
-          </noindex>
-        </li>
-      </ul>
+      <Heading>Overview</Heading>
 
       <p>
-        Я занимаюсь профессиональной разработкой с 2016 года. За это время я научился находить общий язык практически с
-        любым человеком. Умею отстаивать свою точку зрения, но открыт и к чужой.
+        I have been a professional JavaScript developer since 2016. My work experience includes working on high-load
+        services, complex B2C applications for daily use, banking applications, B2B products, open-source libraries,
+        also a lot of html/css development in accordance with modern standards and practices.
       </p>
 
       <p>
-        Ищу себе крутую живую команду с интересным продуктом, на который можно активно влиять. Не привязываюсь к
-        технологиям. Очень хочу изучать новые языки.
+        I love <strong>TypeScript</strong> and <strong>React</strong> combination and know best practices to build
+        easy-expandable architecture based on those tools and its ecosystem. I also quickly explore new technologies.
       </p>
 
-      <p className="lead">Рассматриваю предложения от 280&nbsp;000&nbsp;₽.</p>
-
-      <Heading>Опыт работы</Heading>
+      <p>
+        Throughout my career I have learned to find a common language with anybody and have succeeded in mentoring. I
+        know how to defend my point of view, but I'm also open to someone else's.
+      </p>
 
       <WithAside
         aside={
           <>
-            <p>Апрель 2021 — настоящее время</p>
+            <strong>Personal toolkit</strong>
 
-            <KeywordsWrapper>
-              {['JavaScript', 'React', 'TypeScript'].map((item, i) => (
-                <Keyword key={i}>{item}</Keyword>
-              ))}
-            </KeywordsWrapper>
+            <ul>
+              <li>Modern HTML, CSS and JavaScript</li>
+              <li>React</li>
+              <li>Webpack</li>
+              <li>TypeScript</li>
+              <li>Prettier</li>
+              <li>Node.js</li>
+              <li>Jest</li>
+              <li>Next.js</li>
+            </ul>
           </>
         }
       >
-        <Heading level={2}>Tinkoff</Heading>
-      </WithAside>
+        <Heading>Skills</Heading>
 
-      <p>Разрабатываю интерфейс для банкоматов</p>
+        <ul>
+          <li>
+            Creating web applications with modern stack of technologies from concept through deployment, including:
+            <ul>
+              <li>Single Page Applications of any complexity </li>
+              <li>Universal Web Applications</li>
+              <li>Progressive Web Applications</li>
+            </ul>
+          </li>
+          <li>Maintaining, troubleshooting, optimizing, and improving web applications</li>
+          <li>Developing middle-tier or backend services with Node.js</li>
+          <li>Maintaining open-source libraries</li>
+        </ul>
+      </WithAside>
+      <Heading level={2}>Have good knowledge in</Heading>
+
+      <ul>
+        <li>
+          Approaches
+          <ul>
+            <li>Declarative programming as priority paradigm</li>
+            <li>Functional programming</li>
+            <li>Reactive programming</li>
+            <li>Object oriented programming</li>
+            <li>Test driven development</li>
+            <li>Mobile first approach</li>
+            <li>Style-guide driven UI development</li>
+          </ul>
+        </li>
+        <li>React at a high level</li>
+        <li>Statically-typed coding with TypeScript, Flowtype</li>
+        <li>
+          Any of most popular CSS technologies and practices
+          <ul>
+            <li>PostCSS ecosystem, SCSS, Less</li>
+            <li>Styled components, Emotion, Styled JSX</li>
+            <li>CSS modules, BEM</li>
+          </ul>
+        </li>
+        <li>Popular builders configuration: Webpack, Vite, Parcel, Rollup</li>
+        <li>Testing with Jest, Cypress</li>
+        <li>
+          Security
+          <ul>
+            <li>SSL/HTTPS</li>
+            <li>CORS</li>
+            <li>Content Security Policy</li>
+            <li>OWASP</li>
+          </ul>
+        </li>
+      </ul>
+
+      <Heading>Experience</Heading>
 
       <WithAside
         aside={
           <>
             <p>
-              Июнь 2019 — Октябрь 2020
+              <strong>Frontend developer</strong>
               <br />
-              <em>1 год 5 месяцев</em>
+              April 2020 — present
             </p>
 
-            <KeywordsWrapper>
-              {[
+            <Keywords
+              list={[
+                'JavaScript',
+                'React',
+                'TypeScript',
+                'Docker',
+                'Gitlab CI',
+                'RxJS',
+                'E2E Testing',
+                'UI Kit',
+                'Style-guide',
+                'Declarative Programming',
+              ]}
+            />
+          </>
+        }
+      >
+        <Heading level={2}>Tinkoff Bank</Heading>
+        <em>Payment Technologies Division</em>
+      </WithAside>
+
+      <p>
+        <strong>Key Qualifications & Responsibilities</strong>
+        <ul>
+          <li>Developing ATM user interface</li>
+        </ul>
+      </p>
+
+      <p>
+        <strong>Key Achievements</strong>
+        <ul>
+          <li>Closed technical debts related with legacy code base</li>
+          <li>Introduced and developed new business logic architecture based on finite state machine</li>
+          <li>Introduced and developed an autogenerated map of user interaction scenarios</li>
+          <li>Released new design and rethought UI architecture to easy develop</li>
+          <li>Introduced practice of using components style-guide via Storybook and screenshot testing</li>
+          <li>Made development toolkits for team daily use</li>
+          <li>Increased knowledge base</li>
+          <li>Implemented various business features</li>
+        </ul>
+      </p>
+
+      <WithAside
+        aside={
+          <>
+            <p>
+              <strong>Frontend developer</strong>
+              <br />
+              June 2019 — August 2020
+              <br />
+              <em>1 year 2 months</em>
+            </p>
+
+            <Keywords
+              list={[
                 'JavaScript',
                 'React',
                 'TypeScript',
@@ -104,71 +236,52 @@ export default function Cv() {
                 'Open Source',
                 'UI Kit',
                 'Node.js',
-                'ООП',
-                'ФП',
-                'Super App',
-              ].map((item, i) => (
-                <Keyword key={i}>{item}</Keyword>
-              ))}
-            </KeywordsWrapper>
+                'OOP',
+                'Declarative Programming',
+                'Super-App',
+              ]}
+            />
           </>
         }
       >
-        <Heading level={2}>ВКонтакте</Heading>
+        <Heading level={2}>VK</Heading>
+        <em>API Division/Super-app Division</em>
       </WithAside>
 
       <p>
-        Работал в команде API, разрабатывал новую платформу, которая, к сожалению, всё ещё под NDA. Поддерживал фронтенд
-        сервиса для{' '}
-        <a href="https://vk.com/cc" target="_blank" rel="noopener noreferrer">
-          сокращения ссылок
-        </a>
-        , добавил QR-коды для сокращённых ссылок.
+        <strong>Key Qualifications & Responsibilities</strong>
+        <ul>
+          <li>Developing new features for VK website</li>
+          <li>Developing and maintaining VK’s super-app API</li>
+          <li>Maintain VK open-source libraries</li>
+          <li>Developing MVP products</li>
+        </ul>
       </p>
 
       <p>
-        Работал в команде разработки инструментов для направления суперприложения. Разрабатывал инструменты для
-        взаимодействия ВК и <a href="https://vk.com/services">миниаппов</a> сторонних разработчиков. Поддерживал
-        библиотеку{' '}
-        <a href="https://github.com/vkcom/vk-bridge" target="_blank" rel="noopener noreferrer">
-          VK Bridge
-        </a>{' '}
-        и связанные с ней: разработал для неё тайпинги событий для автосаджеста параметров в IDE пользователя
-        библиотеки, переписал с событий на промисы, разработал Middleware API для создания промежуточных обработчиков
-        событий. Разработал{' '}
-        <a href="https://github.com/vkcom/vk-bridge-mock" target="_blank" rel="noopener noreferrer">
-          библиотеку
-        </a>{' '}
-        для «мока» событий, написал{' '}
-        <a href="https://github.com/VKCOM/vk-mini-apps-api" target="_blank" rel="noopener noreferrer">
-          библиотеку
-        </a>{' '}
-        для упрощённого взаимодействия с VK Bridge. Участвовал в разработке UI-библиотеки{' '}
-        <a href="https://github.com/VKCOM/VKUI" target="_blank" rel="noopener noreferrer">
-          VKUI
-        </a>
-        , переписал большую часть библиотеки на TypeScript
-      </p>
-
-      <p>
-        Разработал несколько разделов для MVP-версии новой платформы для дистанционного обучения{' '}
-        <a href="https://edu.vk.com" target="_blank" rel="noopener noreferrer">
-          edu.vk.com
-        </a>
-        .
+        <strong>Key Achievements</strong>
+        <ul>
+          <li>Developed tools for interaction between VK and third-party mini-apps</li>
+          <li>Maintained open-source libraries VK Bridge, VKUI and related ones</li>
+          <li>Provided support VK's shortening links service</li>
+          <li>Developed the MVP of the platform for e-learning</li>
+          <li>Developed the portal for developers</li>
+        </ul>
       </p>
 
       <WithAside
         aside={
           <>
             <p>
-              Июнь 2018 — Июнь 2019
+              <strong>Fullstack JavaScript developer</strong>
               <br />
-              <em>1 год</em>
+              July 2018 — June 2019
+              <br />
+              <em>1 year</em>
             </p>
 
-            <KeywordsWrapper>
-              {[
+            <Keywords
+              list={[
                 'JavaScript',
                 'React',
                 'TypeScript',
@@ -180,49 +293,52 @@ export default function Cv() {
                 'Open Source',
                 'Unit Testing',
                 'UI Kit',
-                'ФП',
-              ].map((item, i) => (
-                <Keyword key={i}>{item}</Keyword>
-              ))}
-            </KeywordsWrapper>
+                'Declarative Programming',
+              ]}
+            />
           </>
         }
       >
-        <Heading level={2}>Альфа-Банк</Heading>
+        <Heading level={2}>Alfa-Bank</Heading>
+        <em>Digital Division</em>
       </WithAside>
-
       <p>
-        Работал в команде развития{' '}
-        <a href="https://design.alfabank.ru" target="_blank" rel="noopener noreferrer">
-          дизайн-системы
-        </a>{' '}
-        Альфа-Банка. Мейнтенил разработку UI-библиотеки{' '}
-        <a href="https://github.com/alfa-laboratory/arui-feather" target="_blank" rel="noopener noreferrer">
-          ARUI Feather
-        </a>
-        .
+        <strong>Key Qualifications & Responsibilities</strong>
+        <ul>
+          <li>Maintaining design system solutions and integrating it into corporate practice</li>
+        </ul>
       </p>
 
       <p>
-        Разработал новые внутренние продукты для сотрудников Альфа-Банка: конструкторы{' '}
-        <a href="https://design.alfabank.ru/news/mail-editor" target="_blank" rel="noopener noreferrer">
-          писем
-        </a>
-        , лендингов, баннеров, приложение для проверки орфографии. Конструкторы в дальнейшем сократили большое
-        количество человеко-часов сотрудников, верстающих письма и лендинги.
+        <strong>Key Achievements</strong>
+        <ul>
+          <li>
+            Developed several builders for employees to use corporate design system
+            <ul>
+              <li>Builder of e-mail letters</li>
+              <li>Builder of landing pages</li>
+              <li>Builder of advertisement banners</li>
+              <li>Corporate spell checker</li>
+            </ul>
+          </li>
+          <li>Maintained the open-source UI library ARUI Feather and related ones</li>
+          <li>Rewrote frontend part of 3-D Secure bank system and integrated new design system</li>
+        </ul>
       </p>
 
       <WithAside
         aside={
           <>
             <p>
-              Октябрь 2017 — Июнь 2018
+              <strong>Fullstack JavaScript developer</strong>
               <br />
-              <em>9 месяцев</em>
+              October 2017 — July 2018
+              <br />
+              <em>9 months</em>
             </p>
 
-            <KeywordsWrapper>
-              {[
+            <Keywords
+              list={[
                 'JavaScript',
                 'React',
                 'TypeScript',
@@ -242,44 +358,55 @@ export default function Cv() {
                 'Open Source',
                 'Unit Testing',
                 'High Load',
-                'ООП',
-                'ФП',
+                'OOP',
+                'Declarative Programming',
                 'Adobe Photoshop',
-              ].map((item, i) => (
-                <Keyword key={i}>{item}</Keyword>
-              ))}
-            </KeywordsWrapper>
+              ]}
+            />
           </>
         }
       >
         <Heading level={2}>HitBTC</Heading>
+        <em>Cryptocurrency solutions</em>
       </WithAside>
 
       <p>
-        Участвовал в поддержке одной из крупнейших (на 2018-й год) криптовалютных бирж{' '}
-        <a href="https://hitbtc.com" target="_blank" rel="noopener noreferrer">
-          HitBTC
-        </a>
-        . Впервые работал с хайлоад приложением. Переписал фронтенд нескольких разделов с jQuery на React.
+        <strong>Key Qualifications & Responsibilities</strong>
+
+        <ul>
+          <li>Providing support main company products and developing frontend development of MVP's</li>
+        </ul>
       </p>
 
       <p>
-        Нарисовал дизайн, разработал фронтенд и микросервисный бэкенд MVP-версии мониторинг-системы криптовалютных игр.
+        <strong>Key Achievements</strong>
+        <ul>
+          <li>
+            Provided support one of the largest (for 2017) high-load cryptocurrency exchange HitBTC, replaced legacy
+            code and introduced new features with modern technologies
+          </li>
+          <li>Participated in the development of MVP cryptocurrency exchange based on smart contracts</li>
+          <li>
+            Developed frontend and microservice backend on Node.js of the MVP version of a monitoring system for
+            cryptocurrency games
+          </li>
+          <li>Developed an internal application for working with company financial data</li>
+        </ul>
       </p>
-
-      <p>Разработал внутреннее приложение для работы с финансовыми данными.</p>
 
       <WithAside
         aside={
           <>
             <p>
-              Июль 2016 — Октябрь 2017
+              <strong>Frontend developer/UI designer</strong>
               <br />
-              <em>1 год 4 месяца</em>
+              July 2016 — October 2017
+              <br />
+              <em>1 year 4 months</em>
             </p>
 
-            <KeywordsWrapper>
-              {[
+            <Keywords
+              list={[
                 'JavaScript',
                 'React',
                 'TypeScript',
@@ -291,104 +418,56 @@ export default function Cv() {
                 'WebRTC',
                 'TURN',
                 'STUN',
-                'ООП',
+                'OOP',
+                'Declarative Programming',
                 'WebSocket',
                 'Adobe Photoshop',
                 'Unit Testing',
                 'Chrome extentions',
                 'SVG',
-              ].map((item, i) => (
-                <Keyword key={i}>{item}</Keyword>
-              ))}
-            </KeywordsWrapper>
+              ]}
+            />
           </>
         }
       >
-        <Heading level={2}>ГиперМетод</Heading>
+        <Heading level={2}>HyperMethod</Heading>
+        <em>Development and implementation of solutions for remote education</em>
       </WithAside>
 
       <p>
-        Разрабатывал B2B продукты для дистанционного обучения сотрудников компаний. За время работы в ГиперМетоде вырос
-        из верстальщика-дизайнера до полноценного JavaScript-разработчика.
-      </p>
-
-      <p>
-        Нарисовал и разработал интерфейс для интерактивного курса для сотрудников Северстали, а также нарисовал
-        несколько иллюстраций.
-      </p>
-
-      <p>
-        Впервые применил React и внедрил его в старые продукты компании. Заменил в продуктах компании старый сборщик на
-        Ruby на Webpack.
-      </p>
-
-      <p>
-        Нарисовал дизайн и разработал лендинг для конструктора курсов. Разработал адаптивный шаблон для конструктора.
-        Научился взаимодействовать с системами управления обучением при помощи SCORM.
-      </p>
-
-      <p>
-        Разработал новый инструмент для проведения вебинаров для бизнеса. Впервые использовал TypeScript, обучился
-        работе с WebRTC и веб-сокетами. Написал Chrome-расширение для записи вебинара преподавателем.
-      </p>
-
-      <Heading>Некоммерческая деятельность</Heading>
-
-      <p>
-        Делаю сообщество для фронтенд-разработчиков в Петербурге{' '}
-        <a href="https://twitter.com/spb_frontend" target="_blank" rel="noopener noreferrer">
-          SPB Frontend
-        </a>
-        . С 2017-го года провожу{' '}
-        <a
-          href="https://paperpaper.ru/photos/pyat-zavtrakov-v-peterburge-s-bespla/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          фронтенд-завтраки
-        </a>{' '}
-        (пока на паузе из-за карантина).
+        <strong>Key Qualifications & Responsibilities</strong>
+        <ul>
+          <li>Developing B2B products for e-learning of companies employees</li>
+          <li>Company product interfaces development (coding and UI design)</li>
+        </ul>
       </p>
       <p>
-        Выступал с профориентационными лекциями для школьников в рамках «
-        <a href="https://itday.tech-mail.ru" target="_blank" rel="noopener noreferrer">
-          Дня ИТ-знаний
-        </a>
-        ».
+        <strong>Key Achievements</strong>
+        <ul>
+          <li>
+            Developed various courses for e-learning of client companies employees including UI design and illustrations
+          </li>
+          <li>Developed new builder for e-learning courses based on the SCORM specification</li>
+          <li>Developed webinar platform for business based on WebRTC</li>
+          <li>Developed and maintained company websites and promotional landings</li>
+          <li>
+            Introduced React, TypeScript and other modern technologies into company and implemented it into practice
+          </li>
+        </ul>
       </p>
 
-      <p>
-        <br />
-      </p>
+      <Heading>Hobbies and personal qualities</Heading>
 
       <p>
-        <em>
-          P.S. Если вы считаете, что в данном резюме чего-то не хватает, то пожалуйста,{' '}
-          <a href="https://t.me/danakt">свяжитесь со мной</a>, я хочу чтобы моё резюме было максимально информативным.
-          Спасибо!
-        </em>
+        For several years I was the organizer of the St. Petersburg community "SPB Frontend". Together with other
+        organizers, we used to held meetups and informal meetings for frontend developers.
       </p>
 
+      <p>Used to do embedded development with Arduino and Espruino in free time.</p>
+
       <p>
-        <em>
-          P.P.S.{' '}
-          <a
-            href="https://www.notion.so/Dima-Boger-Python-Team-Leader-ac2893048e944dcb90a337fb664d964e"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Богер
-          </a>
-          , спасибо за{' '}
-          <a
-            href="https://www.notion.so/bogers/Ivan-Ivanov-Metameme-master-f04bc549371d4cdaaf7b97ce421eca18"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            шаблон
-          </a>{' '}
-          {'<'}3
-        </em>
+        Worked as a freelance UI designer before professional developer career and have been interested in graphic
+        design ever since.
       </p>
     </Page>
   );

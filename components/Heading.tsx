@@ -28,7 +28,7 @@ const H2 = styled.h2`
   margin: 50px 0 0;
 
   @media (max-width: 590px) {
-    font-size: 17px;
+    font-size: 18px;
     margin-top: 37.5px;
   }
 `;
