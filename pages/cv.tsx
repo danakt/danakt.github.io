@@ -266,7 +266,7 @@ export default function Cv() {
         <ul>
           <li>Developing new features for VK website</li>
           <li>Developing and maintaining VK’s super-app API</li>
-          <li>Maintain VK open-source libraries</li>
+          <li>Maintaining VK open-source libraries</li>
           <li>Developing MVP products</li>
         </ul>
       </p>
