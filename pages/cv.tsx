@@ -451,7 +451,7 @@ export default function Cv() {
         <strong>Key Qualifications & Responsibilities</strong>
         <ul>
           <li>Developing B2B products for e-learning of companies employees</li>
-          <li>Company product interfaces development (coding and UI design)</li>
+          <li>Developing company product interfaces (coding and UI design)</li>
         </ul>
       </p>
       <p>
