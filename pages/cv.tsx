@@ -61,6 +61,19 @@ export default function Cv() {
                 </li>
               </ul>
             </p>
+
+            <p>
+              <strong>Languages</strong>
+
+              <ul>
+                <li>
+                  <strong>English</strong>: Intermediate
+                </li>
+                <li>
+                  <strong>Russian</strong>: Native
+                </li>
+              </ul>
+            </p>
           </>
         }
       >
