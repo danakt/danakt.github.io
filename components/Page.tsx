@@ -3,12 +3,14 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { GlobalStyles } from './GlobalStyles';
 import styled from 'styled-components';
+import { Navigation } from './Navigation';
+import { LinkDesc } from '../types/linkDesc';
 
 const Body = styled.div`
   padding: 30px 0 100px;
 `;
 
-const Wrapper = styled.div`
+const Main = styled.main`
   display: flex;
 `;
 
@@ -30,7 +32,12 @@ const Content = styled.div`
   }
 `;
 
+const Header = styled.header`
+  display: flex;
+`;
+
 const Breadcrumbs = styled.strong`
+  flex: 1 1 auto;
   font-size: 18px;
   font-weight: 400;
   font-style: italic;
@@ -43,6 +50,7 @@ const Breadcrumbs = styled.strong`
 type Props = React.PropsWithChildren<{
   title: string;
   lang?: 'en' | 'ru';
+  navigation?: LinkDesc[];
 }>;
 
 export const Page = (props: Props) => {
@@ -90,21 +98,26 @@ export const Page = (props: Props) => {
           </div>
         </noscript>
 
-        <Breadcrumbs>
-          {router.pathname === '/' ? (
-            name
-          ) : (
-            <>
-              <Link href="/">
-                <a className="always-fresh">{name}</a>
-              </Link>
-              &nbsp;/&nbsp;{props.title}
-            </>
-          )}
-        </Breadcrumbs>
-        <Wrapper>
+        <Header>
+          <Breadcrumbs>
+            {router.pathname === '/' ? (
+              name
+            ) : (
+              <>
+                <Link href="/">
+                  <a className="always-fresh">{name}</a>
+                </Link>
+                &nbsp;/&nbsp;{props.title}
+              </>
+            )}
+          </Breadcrumbs>
+
+          {props.navigation && <Navigation links={props.navigation} />}
+        </Header>
+
+        <Main>
           <Content>{props.children}</Content>
-        </Wrapper>
+        </Main>
       </Body>
     </>
   );
