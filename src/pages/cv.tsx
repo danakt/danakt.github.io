@@ -74,10 +74,7 @@ const CvMarkup = () => {
       >
         <Heading>Danakt Saushkin</Heading>
 
-        <p>
-          JavaScript developer with over six years of professional development experience seeking remote full-time
-          frontend developer position
-        </p>
+        <p>JavaScript developer with over six years experience seeking remote full-time frontend developer position</p>
       </WithAside>
 
       <Heading>Overview</Heading>
@@ -274,7 +271,7 @@ const CvMarkup = () => {
       <ul>
         <li>Developed tools for interaction between VK and third-party mini-apps</li>
         <li>Maintained open-source libraries VK Bridge, VKUI and related ones</li>
-        <li>Provided support VK's shortening links service</li>
+        <li>Provided support for VK's shortening links service</li>
         <li>Developed the MVP of the platform for e-learning</li>
         <li>Developed the portal for developers</li>
       </ul>
@@ -384,7 +381,7 @@ const CvMarkup = () => {
         <strong>Key qualifications & responsibilities</strong>
       </p>
       <ul>
-        <li>Providing support main company products and developing frontend development of MVP's</li>
+        <li>Providing support for main company products and developing frontend development of MVP's</li>
       </ul>
 
       <p>
@@ -392,8 +389,8 @@ const CvMarkup = () => {
       </p>
       <ul>
         <li>
-          Provided support one of the largest (for 2017) high-load cryptocurrency exchange HitBTC, replaced legacy code
-          and introduced new features with modern technologies
+          Provided support to one of the largest (for 2017) high-load cryptocurrency exchange HitBTC, replaced legacy
+          code and introduced new features with modern technologies
         </li>
         <li>Participated in the development of MVP cryptocurrency exchange based on smart contracts</li>
         <li>
