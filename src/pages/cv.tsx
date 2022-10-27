@@ -1,6 +1,6 @@
 import { Heading } from '../components/Heading';
 import { AsidePicture } from '../components/AsidePicture';
-import { Page } from '../components/Page';
+import { PageLayout } from '../components/PageLayout';
 import { WithAside } from '../components/WidthAside';
 import { Keywords } from '../components/Keywords';
 
@@ -491,8 +491,8 @@ const CvMarkup = () => {
 
 export default function Cv() {
   return (
-    <Page title="Curriculum vitae" lang="en">
+    <PageLayout title="Curriculum vitae" lang="en">
       <CvMarkup />
-    </Page>
+    </PageLayout>
   );
 }

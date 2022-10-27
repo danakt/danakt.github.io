@@ -1,68 +1,51 @@
-import { Page } from '../components/Page';
-import Link from 'next/link';
+import { PageLayout } from '../components/PageLayout';
 import { AsidePicture } from '../components/AsidePicture';
 import { WithAside } from '../components/WidthAside';
 import { Heading } from '../components/Heading';
 
 export default function Index() {
   return (
-    <Page title="Да это же Данакт">
-      <Heading>Привет!</Heading>
+    <PageLayout title="Danakt" lang="en">
+      <Heading>Hello!</Heading>
 
-      <WithAside aside={<AsidePicture src="/me2016.jpg" description="Это я в 2016" />}>
-        <p>
-          Меня зовут{' '}
-          <Link href="/danakt">
-            <a href="/danakt" title="Данакт FAQ">
-              Данакт
-            </a>
-          </Link>
-          , я программист.
-        </p>
+      <WithAside aside={<AsidePicture src="/me2016.jpg" description="This is me in 2016" />}>
+        <p>My name is Danakt, I'm a programmer.</p>
       </WithAside>
 
-      <Heading>Зачем этот сайт нужен?</Heading>
+      <Heading>Why is this site needed?</Heading>
 
       <p>
-        Я купил домены{' '}
+        I bought the{' '}
         <a href="//danakt.com" className="always-fresh">
           danakt.com
         </a>{' '}
-        и{' '}
+        {/* and{' '}
         <a href="//danakt.ru" className="always-fresh">
           danakt.ru
-        </a>
-        , чтобы их никто не занял вместо меня. А коли купил, надо чтобы что-то здесь было. Ну и еще для того, чтобы
-        здесь были мои контакты.
+        </a>{' '} */}
+        domain so that no one would take they instead of me. And if I bought it, I need to have something here. Well,
+        and also in order to have my contacts here.
       </p>
 
-      <Heading>Мои контакты</Heading>
+      <Heading>My contacts</Heading>
 
       <ul>
         <li>
-          <a href="https://t.me/danakt">Телеграм</a> — лучший способ со мной связаться;
-        </li>
-
-        {/* <li>
-          <a href="https://vk.com/danakt">ВК</a> — запасной вариант связи;
-        </li> */}
-
-        <li>
-          <a href="https://twitter.com/danakt_frost">Твиттер</a> — сюда иногда пишу;
+          <a href="https://t.me/danakt">Telegram</a> — the best way to contact me;
         </li>
 
         <li>
-          <a href="https://instagram.com/danakt_frost">Инстаграм</a> — сюда иногда выкладываю фото;
+          <a href="https://twitter.com/_danakt">Twitter</a> — sometimes write here;
         </li>
 
         <li>
-          <a href="https://github.com/danakt">Гитхаб</a> — сюда иногда выкладываю написанный в свободное время код.
+          <a href="https://instagram.com/danakt_saushkin">Instagram</a> — sometimes publish photos here;
+        </li>
+
+        <li>
+          <a href="https://github.com/danakt">GitHub</a> — sometimes publish code written in my spare time.
         </li>
       </ul>
-
-      {/* <p>
-        Также, вы можете написать мне на почту: <a href="mailto: danakt@danakt.com">danakt@danakt.com</a>.
-      </p> */}
-    </Page>
+    </PageLayout>
   );
 }

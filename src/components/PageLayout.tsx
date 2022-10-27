@@ -53,7 +53,7 @@ type Props = React.PropsWithChildren<{
   navigation?: LinkDesc[];
 }>;
 
-export const Page = (props: Props) => {
+export const PageLayout = (props: Props) => {
   const lang = props.lang ?? 'ru';
   const name = lang === 'en' ? 'Danakt' : 'Данакт';
   const router = useRouter();
@@ -112,7 +112,7 @@ export const Page = (props: Props) => {
             )}
           </Breadcrumbs>
 
-          {props.navigation && <Navigation links={props.navigation} />}
+          {/* {props.navigation && <Navigation links={props.navigation} />} */}
         </Header>
 
         <Main>

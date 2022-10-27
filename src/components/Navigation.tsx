@@ -1,15 +1,16 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { LinkDesc } from '../types/linkDesc';
 
 type Props = {
-  links: LinkDesc[];
+  links?: LinkDesc[];
+  items: ReactNode[];
 };
 
 export const Navigation = (props: Props) => {
   return (
     <nav>
-      {props.links.map((linkDesc, i) => (
+      {/* {props.links.map((linkDesc, i) => (
         <React.Fragment key={i}>
           {'href' in linkDesc ? (
             <Link href={linkDesc.href}>
@@ -27,7 +28,9 @@ export const Navigation = (props: Props) => {
             </a>
           )}
         </React.Fragment>
-      ))}
+      ))} */}
+
+      {props.items}
     </nav>
   );
 };
