@@ -1,9 +1,9 @@
-import { Page } from '../components/Page';
+import { PageLayout } from '../components/PageLayout';
 import { Heading } from '../components/Heading';
 
 export default function Danakt() {
   return (
-    <Page title="Данакт FAQ">
+    <PageLayout title="Данакт FAQ">
       <Heading>Данакт FAQ</Heading>
 
       <Heading level={2}>А как тебя на самом деле зовут?</Heading>
@@ -52,6 +52,6 @@ export default function Danakt() {
           .
         </em>
       </p>
-    </Page>
+    </PageLayout>
   );
 }
