@@ -10,12 +10,7 @@ const CvMarkup = () => {
       <WithAside
         aside={
           <>
-            <AsidePicture
-              src="/me2020.jpg"
-              videoSrc="/me2020.mp4"
-              videoType="video/mp4"
-              description="This is how I usually never look"
-            />
+            <AsidePicture src="/me2020-2.png" />
 
             <p>
               <strong>Contacts:</strong>
