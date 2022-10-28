@@ -9,7 +9,7 @@ export default function Index() {
       <Heading>Hello!</Heading>
 
       <WithAside aside={<AsidePicture src="/me2016.jpg" description="This is me in 2016" />}>
-        <p>My name is Danakt, I'm a programmer.</p>
+        <p>My name is Danakt, I'm a software developer.</p>
       </WithAside>
 
       <Heading>Why is this site needed?</Heading>
