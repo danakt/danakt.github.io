@@ -87,7 +87,8 @@ const CvMarkup = () => {
 
       <p>
         I love <strong>TypeScript</strong> and <strong>React</strong> combination and know best practices to build
-        easy-expandable architecture based on those tools and its ecosystem. I also quickly explore new technologies.
+        easy-expandable architecture based on those tools and their ecosystem. I'm also quick at exploring new
+        technologies.
       </p>
 
       <p>
@@ -117,7 +118,7 @@ const CvMarkup = () => {
 
         <ul>
           <li>
-            Creating web applications with modern stack of technologies from concept through deployment, including:
+            Creating web applications with modern stack of technologies from concept to deployment, including:
             <ul>
               <li>Single Page Applications of any complexity </li>
               <li>Universal Web Applications</li>
