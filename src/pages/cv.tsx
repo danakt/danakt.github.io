@@ -382,7 +382,7 @@ const CvMarkup = () => {
         <strong>Key qualifications & responsibilities</strong>
       </p>
       <ul>
-        <li>Providing support for main company products and developing frontend development of MVP's</li>
+        <li>Providing support for main company products and developing frontend of MVP's</li>
       </ul>
 
       <p>
