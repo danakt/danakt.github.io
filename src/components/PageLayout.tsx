@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { GlobalStyles } from './GlobalStyles';
 import styled from 'styled-components';
-import { Navigation } from './Navigation';
+// import { Navigation } from './Navigation';
 import { LinkDesc } from '../types/linkDesc';
 
 const Body = styled.div`
@@ -34,6 +34,10 @@ const Content = styled.div`
 
 const Header = styled.header`
   display: flex;
+
+  @media print {
+    display: none;
+  }
 `;
 
 const Breadcrumbs = styled.strong`
