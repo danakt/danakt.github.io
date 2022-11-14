@@ -155,17 +155,9 @@ const CvMarkup = () => {
             <li>CSS modules, BEM</li>
           </ul>
         </li>
-        <li>Popular builders configuration: Webpack, Vite, Parcel, Rollup</li>
-        <li>Testing with Jest, Cypress</li>
-        <li>
-          Security
-          <ul>
-            <li>SSL/HTTPS</li>
-            <li>CORS</li>
-            <li>Content Security Policy</li>
-            <li>OWASP</li>
-          </ul>
-        </li>
+        <li>Popular builders configuration</li>
+        <li>Testing</li>
+        <li>Security</li>
       </ul>
 
       <Heading>Experience</Heading>
