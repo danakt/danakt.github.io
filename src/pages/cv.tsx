@@ -87,13 +87,13 @@ const CvMarkup = () => {
 
       <p>
         I love <strong>TypeScript</strong> and <strong>React</strong> combination and know best practices to build
-        easy-expandable architecture based on those tools and their ecosystem. I'm also quick at exploring new
+        easy-expandable architecture based on those tools and their ecosystem. I am also quick at exploring new
         technologies.
       </p>
 
       <p>
         Throughout my career I have learned to find a common language with anybody and have succeeded in mentoring. I
-        know how to defend my point of view, but I'm also open to someone else's.
+        know how to defend my point of view, but I am also open to someone else's.
       </p>
 
       <WithAside
