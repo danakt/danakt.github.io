@@ -17,12 +17,12 @@ const CvMarkup = () => {
             </p>
 
             <ul>
-              <li>Almaty, Kazakhstan</li>
+              <li>Tbilisi, Georgia</li>
 
               <li>
                 Phone:{' '}
                 <noindex>
-                  <a href="tel:+77054346140">+7 (705) 434-61-40</a>
+                  <a href="tel:+995591220289">+995 591 220 289</a>
                 </noindex>
               </li>
 
