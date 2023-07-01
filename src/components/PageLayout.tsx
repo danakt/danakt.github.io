@@ -5,6 +5,7 @@ import { GlobalStyles } from './GlobalStyles';
 import styled from 'styled-components';
 // import { Navigation } from './Navigation';
 import { LinkDesc } from '../types/linkDesc';
+import Script from 'next/script';
 
 const Body = styled.div`
   padding: 30px 0 100px;
@@ -89,7 +90,7 @@ export const PageLayout = (props: Props) => {
         <meta name="twitter:image:src" content={ogImage} />
 
         {/* Metrika */}
-        <script src="/metrika.js" />
+        <Script src="/metrika.js" />
       </Head>
 
       <GlobalStyles />

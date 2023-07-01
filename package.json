@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
-    "build": "next build && next export",
-    "deploy": "rimraf ./.next && npm run build && gh-pages -t -d ./out -b master"
+    "build": "next build",
+    "deploy": "rimraf ./.next && next build && next export && gh-pages -t -d ./out -b master"
   },
   "repository": {
     "type": "git",
