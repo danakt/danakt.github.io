@@ -45,7 +45,7 @@ export default function Index() {
           </li>
 
           <li>
-            Или можно отправить сообщение на почту: <a href="https://t.me/danakt">danakt@protonmail.com</a>.
+            Или можно отправить сообщение на почту: <a href="mailto:danakt@protonmail.com">danakt@protonmail.com</a>.
           </li>
 
           {/* <li>
